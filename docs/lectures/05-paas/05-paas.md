@@ -47,11 +47,7 @@ Da Infrastructure-as-a-Service bei PaaS inbegriffen ist, bietet PaaS dieselben V
 - Konfiguration des Workflow
 - Autodeploy bei Push-Event auf GitHub Pages
 
-<p>
-<a href="/CloudComputingCWA2021/exercises/05-cicd/05-cicd" class="nav-link action-button">
-  Zur Übung →
-</a>
-</p>
+// todo link zur Übung
 
 ## Literatur und Ressourcen
 > * Lisdorf Anders, "Cloud Computing Basics - A Non-Technical Introduction", Apress, 2021

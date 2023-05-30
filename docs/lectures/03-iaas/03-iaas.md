@@ -258,8 +258,4 @@ Es gibt verschiedene Tools, die für Infrastructure as Code verwendet werden kö
 
 ## Arbeitsauftrag
 
-<p>
-<a href="/CloudComputingCWA2021/exercises/03-iaas/03-iaas" class="nav-link action-button">
-  Zur Übung →
-</a>
-</p>
+// todo zur Übung

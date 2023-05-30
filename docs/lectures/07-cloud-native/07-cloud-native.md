@@ -16,7 +16,7 @@ Cloud-native Anwendungen laufen nicht mehr in der klassischen Serverfarm im haus
 ![Cloud Native Konzept](./img/cloud_native_model.png)
 *Konzepte von Cloud Native Development. Source: [Plusserver](https://www.plusserver.com/blog/was-ist-cloud-native)*
 
-Die Konzepte [Containerization](/CloudComputingCWA2021/lectures/06-containerization/06-containerization) und [CI/CD](/CloudComputingCWA2021/lectures/04-git/04-git) haben wir in früheren Einheiten schon kennengelernt. Der Fokus dieser Einheit liegt auf den **Microservices** und **DevOps**.
+Der Fokus dieser Einheit liegt auf den **Microservices** und **DevOps**.
 
 ### Einsatz von Cloud Native
 Etablierte Unternehmen wählen selten den Cloud-native Ansatz. Dies liegt daran, dass sie in der Regel bereits eine beträchtliche Anzahl von Systemen vor Ort haben. Obwohl dieser Ansatz oft für Demonstrationen und Marketingzwecke verwendet wird, ist es nicht für jedes Unternehmen sinnvoll den Cloud-native Ansatz umzusetzen. Dazu müssten sie das gesamte IT-Personal zu Cloud Experten machen. Für neu gegründete Unternehmen sollte Cloud-Native der Standardansatz sein. Es gibt keinen Grund, nicht als Cloud-Native zu starten. Eine der Herausforderungen der Cloud-Native-Lösung besteht darin, die gleiche
