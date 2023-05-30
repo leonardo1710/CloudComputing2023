@@ -8,3 +8,5 @@
 .docs/.vitepress/cache
 
 /docs/docs/server.md
+
+/node_modules
