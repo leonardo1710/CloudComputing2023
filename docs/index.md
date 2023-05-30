@@ -14,20 +14,19 @@ hero:
       link: /exercises/index
     - theme: alt
       text: View on GitHub
-      link: https://github.com/evavic44/adocs-template
+      link: https://github.com/leonardo1710/CloudComputing2023
 
 features:
   - icon: ⚡️
     title: Cloud Fundamentals
-    details: Cloud Grundlagen verstehen, aktiv diskutieren und Aufgaben besprechen
+    details: Cloud Grundlagen verstehen, aktive Diskussion und Aufgaben besprechen
   - icon: 🔥
     title: Cloud Exercises
-    details: Hands-On Cloud Tutorials
-  - icon: 🎉
+    details: Arbeitsaufgaben und Hands-On Cloud Tutorials basierend auf Cloud Fundamentals
+  - icon: 🚀
     title: Advanced
-    details: Lorem ipsum...
+    details: Problemstellungen selbsständig lösen, Wissen verknüpfen, (Service-)Entscheidungen treffen und argumentieren
 ---
 
-<!-- test -->
 
 
