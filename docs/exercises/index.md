@@ -9,11 +9,11 @@ sidebar: auto
 - Cloud-Anbieter Recherche
 - Moodle Quiz
 
-<p>
-<a href="/CloudComputingCWA2021/exercises/01-cloud-intro" class="nav-link action-button">
-  Zur Übung →
-</a>
-</p>
+
+[Zur Übung ->](/exercises/01-cloud-intro/01-cloud-intro)
+
+
+<!--
 
 ## 03 IaaS und Vorbereitung VCS
 - Erstellung einer VM in Azure
@@ -134,3 +134,5 @@ sidebar: auto
   Zur Übung →
 </a>
 </p>
+
+-->

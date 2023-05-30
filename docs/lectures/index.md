@@ -44,9 +44,10 @@ sidebar: auto
 
 [Zur Einheit ->](/lectures/03-iaas/03-iaas)
 
-[Zur Übung ->](/exercises/03-iaas/03-iaas)
+<!--[Zur Übung ->](/exercises/03-iaas/03-iaas)-->
 
 
+<!--
 ## 04 Automatisierung - VCS (GIT), Continuous Integration und Continuous Deployment
 
 - Continuous Integration (CI)
@@ -54,10 +55,6 @@ sidebar: auto
 - Version Control Systems (VCS)
   - Ziele von VCS
   - GIT
-
-[Zur Einheit ->](/lectures/04-git/04-git)
-
-[Zur Übung ->](/exercises/04-git/04-git)
 
 ## 05 Platform-as-a-Service - PaaS
 
@@ -176,3 +173,4 @@ sidebar: auto
 - Ausarbeitung eines Fragenkatalogs
 - Q&A
 
+-->
