@@ -1,7 +1,7 @@
 {
   "name": "cloudcoursepage",
   "version": "1.0.0",
-  "description": "course page for cloud computing ",
+  "description": "Course page for cloud computing ",
   "main": "index.js",
   "scripts": {
     "docs:dev": "vitepress dev docs",
