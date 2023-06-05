@@ -3,52 +3,21 @@ export default {
   title: 'Cloud Computing Modul 2023',
   description: 'Lecture Page for Cloud Computing 2023',
   base: '/CloudComputing2023/',
+  lastUpdated: true,
 
   themeConfig: {
 
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Lectures', link: '/lectures/index' },
+      {
+        text: "Lectures",
+        items: [
+          { text: "Cloud Intro", link: "/lectures/01-cloud-intro/01-cloud-intro" },
+          /*{ text: "IaaS", link: "/lectures/03-iaas/03-iaas" },*/
+        ],
+      },
       { text: 'Exercises', link: '/exercises/index' },
       { text: 'About', link: '/about/index' },
     ],
-    
-    /*
-    sidebar: [
-      {
-        text: "About",
-        items: [
-          { text: "Introduction", link: "/introduction" },
-          { text: "Getting Started", link: "/getting-started" },
-        ],
-      },
-
-      {
-        text: "Lectures",
-        collapsible: false,
-        items: [
-          { text: "Introduction", link: "/introduction" },
-          { text: "Getting Started", link: "/getting-started" },
-        ],
-      },
-      {
-        text: "Exercises",
-        collapsible: true,
-        items: [
-          { text: "Introduction", link: "/introduction" },
-          { text: "Getting Started", link: "/getting-started" },
-        ],
-      },
-
-      {
-        //text: 'Navigation',
-        items: [
-          { text: 'Lectures', link: '/lectures/index' },
-          { text: 'Exercises', link: '/exercises/index' },
-        ]
-      }
-    ]
-    */
   },
   footer: {
     message: "Released under the MIT License.",

@@ -7,44 +7,38 @@ sidebar: auto
 
 ## 01 Einführung in Cloud Computing
 
-- Komponenten der Cloud
-- Aufbau Server und Datacenter
-- Ziele von Cloud Computing
+- Was ist die Cloud?
+- Grundlegende Technologien
 - Service Modelle
-- Cloud Charakteristiken
-- Business Models: Overbooking, Pay-per-Use, Standardization & Automation
+- Geschäftsmodelle
+- Architektur der Cloud
 - Deployment Modelle
 
 [Zur Einheit ->](/lectures/01-cloud-intro/01-cloud-intro)
 
+[Zum Arbeitsauftrag ->](/exercises/01-cloud-intro/01-cloud-intro)
+
 
 ## 02 Grundlagen - Netzwerktechnik
 
-- Netzwerke
-- LAN
-- Router
-- HTTP
-- DNS
-- TCP/IP
-- Netzwerkmasken
-- OSI Schichtenmodell
-- Ethernet
-- MAC
+- ISO-OSI
+- IPv4, ARP, ICMP, DHCP,
+- DNS, URI, HTTP
 
-[Zur Übung ->](/exercises/02-openstack/02-openstack-install)
+[Zum Arbeitsauftrag ->](/exercises/02-openstack/02-openstack-install)
 
-
+<!--
 ## 03 Virtualisierung und Infrastructure-as-a-Service - IaaS
 
 - IaaS Intro
-- Virtualisierung
-- Availability Zonen
+- Virtualisierung in der Cloud
+- VM Pooling und Availability Zonen
 - Cloud Compute Ressourcen
 - Cloud Storage
 
 [Zur Einheit ->](/lectures/03-iaas/03-iaas)
 
-<!--[Zur Übung ->](/exercises/03-iaas/03-iaas)-->
+[Zur Übung ->](/exercises/03-iaas/03-iaas)-->
 
 
 <!--

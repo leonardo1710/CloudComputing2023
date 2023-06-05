@@ -1,7 +1,6 @@
 ---
 lang: de-DE
 title: Einführung in Cloud Computing
-sidebar: auto
 ---
 
 # Einführung in Cloud Computing

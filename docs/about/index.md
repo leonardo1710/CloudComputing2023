@@ -11,15 +11,14 @@
   <ul>
     <li>Theoretische Grundlagen</li>
     <li>Aktive Diskussion</li>
-    <li>Besprechung von Exercises</li>
+    <li>Besprechung von Arbeitsaufträgen</li>
   </ul>
   </div>
   <div class="column">
     <p><b>Exercises (betreutes Lernen)</b></p>
     <ul>
       <li>Geleitete Anwendung der Fundamentals</li>
-      <li>Hands-On</li>
-      <li>Moodle-Quizzes zur Einheit (Wissenscheck)</li>
+      <li>Hands-On Arbeitsaufträge</li>
     </ul>
   </div>
   <div class="column">
@@ -45,21 +44,20 @@
   <ul>
     <li>Diskussion und Diskurs in den Einheiten</li>
     <li>Aktivität im Moodle-Forum</li>
-    <li>Präsentation und Besprechung der Exercises</li>
+    <li>Präsentation und Besprechung der Arbeitsaufträge</li>
   </ul>
   </div>
   <div class="column">
     <p><b>Exercises (35%) – muss positiv sein</b></p>
     <ul>
-      <li>Abgabe der Exercises (30%)</li>
-      <li>Moodle-Quizzes (5%)</li>
+      <li>Abgabe der Arbeitsaufträge in Moodle (30%)</li>
     </ul>
   </div>
   <div class="column">
 
-  <p><b>Abschlussgespräch (50%) – muss positiv sein</b></p>
+  <p><b>Projekt und Abschlussgespräch (50%) – muss positiv sein</b></p>
     <ul>
-      <li>28.01.2022</li>
+      <li>04.08.2023</li>
     </ul>
   </div>
 </div>
