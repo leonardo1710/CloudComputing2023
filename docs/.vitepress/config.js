@@ -1,6 +1,6 @@
 export default {
   appearance: true,
-  title: 'Cloud Computing CWA 2023',
+  title: 'Cloud Computing Modul 2023',
   description: 'Lecture Page for Cloud Computing 2023',
   base: '/CloudComputing2023/',
 

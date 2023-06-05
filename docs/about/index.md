@@ -1,4 +1,4 @@
-# About
+# Kursmodalitäten Cloud Computing
 
 ## Aufbau des Moduls
 
@@ -27,14 +27,14 @@
   <p><b>Advanced (Abschlussgespräch)</b></p>
     <ul>
       <li>28.01.2022</li>
-      <li>Expertengesprächn</li>
+      <li>Expertengespräche</li>
       <li>Zusammenführung Theorie und Anwendung</li>
     </ul>
   </div>
 </div>
 
 ## Lernziele
-<img src="./img/lernziele.png" style="width: 100%;" alt="Lernziele" class="center">
+<img src="./img/lernziele_cloud.png" style="width: 100%;" alt="Lernziele" class="center">
  
 ## Grading
 
