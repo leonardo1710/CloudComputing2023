@@ -8,19 +8,22 @@ sidebar: false
 # 01 Arbeitsauftrag - Einführung in Cloud Computing
 
 ## Recherche Cloud-Anbieter (in Gruppen)
-Zu recherchierende Cloud Provider:
-* Amazon Web Services (AWS) - Gruppe 1
-* Microsoft Azure - Gruppe 2
-* Google Cloud - Gruppe 3
-* Alibaba Cloud - Gruppe 4
-* Oracle Cloud - Gruppe 5
+**Zu recherchierende Cloud Provider:**
+* Amazon Web Services (AWS) - Gruppe A
+* Microsoft Azure - Gruppe B
+* Google Cloud - Gruppe C
+* Alibaba Cloud - Gruppe D
+* Oracle Cloud - Gruppe E
 
-Folgende Punkte sollte die Recherche beinhalten:
-* Überblick zum Service Provider
+**Folgende Punkte sollte die Recherche beinhalten:**
+
+Überblick zum Service Provider
   * Entstehung
   * Market-share
-  * Verfügbare Regionen
-* 3 Services des Providers recherchieren
+  * Verfügbare Regionen 
+
+Recherchiert 3 Services des jeweiligen Providers, wobei zumindest ein Service aus dem IaaS-Modell und ein Service dem PaaS-Modell zuzordnen ist.
+Zu jedem Service:
   * Name und Zweck des Service
   * Service Modell
   * Anwendungsbeispiele (wann kann/sollte das Service verwendet werden?)
@@ -28,9 +31,8 @@ Folgende Punkte sollte die Recherche beinhalten:
 
 
 ::: tip Abgabe
-- Abgabedokument kann die Präsentation sein
-- Teammitglieder im Abgabedokument anführen
+- Abgabedokument kann die Präsentationsdatei sein
 - Nur eine Abgabe je Gruppe notwendig
-- Kurze Präsentation zu Ergebnissen am *23.06.2023*
-- Abgabe auf Moodle bis: *21.06.2023 23:59*
+- Abgabe auf Moodle bis: **21.06.2023 23:59**
+- Präsentation zu Ergebnissen am **23.06.2023**. Die Präsentation sollte ca. 10 Minuten dauern.
 :::

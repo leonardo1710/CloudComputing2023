@@ -24,10 +24,12 @@ sidebar: auto
 - ISO-OSI
 - IPv4, ARP, ICMP, DHCP,
 - DNS, URI, HTTP
-
-[Zum Arbeitsauftrag ->](/exercises/02-openstack/02-openstack-install)
+- Client-Server
 
 <!--
+[Zum Arbeitsauftrag ->](/exercises/02-openstack/02-openstack-install)
+
+
 ## 03 Virtualisierung und Infrastructure-as-a-Service - IaaS
 
 - IaaS Intro

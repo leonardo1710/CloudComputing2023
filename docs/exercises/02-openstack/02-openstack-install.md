@@ -8,12 +8,21 @@ next:
 ---
 
 # {{ $frontmatter.title }}
-> Note: Diese Übung basiert hauptsächlich auf [OpenStack Tutorials](https://ubuntu.com/openstack/tutorials)
+> Note: Dieser Arbeitsauftrag basiert auf [OpenStack Tutorials](https://ubuntu.com/openstack/tutorials)
 
 OpenStack ist die beliebteste Open-Source-Cloud-Plattform, die verteilte Rechen-, Netzwerk- und Speicherressourcen im Rechenzentrum zusammenfasst und die bedarfsgerechte Bereitstellung virtueller Maschinen über ein Self-Service-Portal ermöglicht. OpenStack betreibt tausende von öffentlichen und privaten Clouds auf der ganzen Welt.
 
-## What is MicroStack?
+## Was ist MicroStack?
 MicroStack ist eine auf OpenStack basierende Micro-Cloud-Plattform, die für den Edge-Bereich und kleine Rechenzentren entwickelt wurde und mit minimalem Aufwand installiert und gewartet werden kann. MicroStack beseitigt die Komplexität, die hinter OpenStack steckt, und bietet einen durchdachten Ansatz für das Design der OpenStack-Architektur und eine unkomplizierte Installationsmethode. 
+
+![OpenStack Overview](./img/openstack.svg)
+*OpenStack Überblick.* [Source](https://www.freecodecamp.org/news/openstack-tutorial-operate-your-own-private-cloud/)
+
+OpenStack besteht aus mehreren Kernkomponenten und Services, die je nach Bedürfnis individuell zusammengestellt und verwendet werden können.
+Das untenstehende Diagramm zeigt die verfügbaren Services von OpenStack und wie diese zusammenspielen.
+![OpenStack Map](./img/openstack-map.svg)
+*OpenStack Services.* [Source](https://www.freecodecamp.org/news/openstack-tutorial-operate-your-own-private-cloud/)
+
 
 ## Ziele
 * Installieren von OpenStack am Server

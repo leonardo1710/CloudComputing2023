@@ -23,10 +23,10 @@
   </div>
   <div class="column">
 
-  <p><b>Advanced (Abschlussgespräch)</b></p>
+  <p><b>Advanced</b></p>
     <ul>
-      <li>28.01.2022</li>
-      <li>Expertengespräche</li>
+      <li>04.08.2023</li>
+      <li>Größerer Arbeitsauftrag und Expert:innengespräche</li>
       <li>Zusammenführung Theorie und Anwendung</li>
     </ul>
   </div>
@@ -42,7 +42,7 @@
   <p><b>Aktive Diskussion – Mitarbeit (15%)</b></p> 
   
   <ul>
-    <li>Diskussion und Diskurs in den Einheiten</li>
+    <li>Diskussion in den Einheiten</li>
     <li>Aktivität im Moodle-Forum</li>
     <li>Präsentation und Besprechung der Arbeitsaufträge</li>
   </ul>
@@ -50,7 +50,7 @@
   <div class="column">
     <p><b>Exercises (35%) – muss positiv sein</b></p>
     <ul>
-      <li>Abgabe der Arbeitsaufträge in Moodle (30%)</li>
+      <li>Abgabe der Arbeitsaufträge in Moodle</li>
     </ul>
   </div>
   <div class="column">
