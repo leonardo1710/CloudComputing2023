@@ -5,7 +5,7 @@ title: Einführung in Cloud Computing
 
 # Einführung in Cloud Computing
 
-> "The cloud is just somebody else's computer." (Quelle unbekannt)
+> "The cloud is just somebody else's computer."
 
 In den letzten Jahren hat sich das Thema Cloud Computing zu einem der wichtigsten und revolutionärsten Konzepte in der IT-Branche entwickelt. Cloud Computing ermöglicht es Unternehmen und Privatpersonen, auf eine Vielzahl von IT-Ressourcen zuzugreifen, darunter Speicherplatz, Rechenleistung, Software und Anwendungen, über das Internet. Diese Ressourcen werden nicht mehr lokal auf physischen Geräten gespeichert, sondern in entfernten Rechenzentren, die über das Internet verbunden sind.
 
