@@ -33,6 +33,6 @@ Zu jedem Service:
 ::: tip Abgabe
 - Abgabedokument kann die Präsentationsdatei sein
 - Nur eine Abgabe je Gruppe notwendig
-- Abgabe auf Moodle bis: **21.06.2023 23:59**
+- Abgabe auf Moodle bis: **23.06.2023 13:00**
 - Präsentation zu Ergebnissen am **23.06.2023**. Die Präsentation sollte ca. 10 Minuten dauern.
 :::

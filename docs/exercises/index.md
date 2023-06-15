@@ -6,7 +6,7 @@ sidebar: auto
 ---
 
 ## 01 Einführung in Cloud Computing
-- Cloud-Anbieter Recherche (Abgabe in Moodle **21.06.2023**)
+- Cloud-Anbieter Recherche (Abgabe in Moodle **23.06.2023**)
 - Gruppenpräsentation (am **23.06.2023**)
 
 [Zum Arbeitsauftrag ->](/exercises/01-cloud-intro/01-cloud-intro)
