@@ -256,6 +256,10 @@ Es gibt verschiedene Tools, die für Infrastructure as Code verwendet werden kö
 
 ![Automatisierungs-Tools](./img/automatisierungstools.png)
 
-## Arbeitsauftrag
-
-// todo zur Übung
+## Literatur
+> * Surianarayanan and Chelliah, "Essentials of Cloud Computing", Springer Nature Switzerland, 2019
+> * Dan C. Marinescu, "Cloud Computing, Theory and Practice", Third Edition, Morgan Kaufmann Publishers, 2023
+> * B. Varghese and R. Buyya, “Next Generation Cloud Computing: New Trends and Research Directions,” Volume 79, Part 3, February 2018, pp. 849-861.
+> * Haengkon Kim and Roger Lee, "Software Engineering in IoT, Big Data, Cloud and Mobile Computing", Studies in Computational Intelligence 930, Springer, 2021
+> * Lisdorf Anders, "Cloud Computing Basics - A Non-Technical Introduction", Apress, 2021
+> * Manvi Sunilkumar and Shyam Gopal Krishna, "Cloud Computing - Concepts and Technologies", CRC Press, 2021

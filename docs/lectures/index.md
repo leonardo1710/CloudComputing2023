@@ -29,7 +29,7 @@ sidebar: auto
 <!--
 [Zum Arbeitsauftrag ->](/exercises/02-openstack/02-openstack-install)
 
-
+-->
 ## 03 Virtualisierung und Infrastructure-as-a-Service - IaaS
 
 - IaaS Intro
@@ -40,7 +40,7 @@ sidebar: auto
 
 [Zur Einheit ->](/lectures/03-iaas/03-iaas)
 
-[Zur Übung ->](/exercises/03-iaas/03-iaas)-->
+[Zur Übung ->](/exercises/02-openstack/02-openstack-devstack-install)
 
 
 <!--

@@ -12,7 +12,7 @@ next:
 > Note: Dieser Arbeitsauftrag basiert auf [OpenStack Tutorials](https://ubuntu.com/openstack/tutorials)
 
 
-OpenStack bestejt aus den folgenden Grundkomponenten:
+OpenStack besteht aus den folgenden Grundkomponenten:
 
 * **OpenStack Services** stellen API-Endpunkte bereit und bieten grundlegende Cloud-Funktionen wie die Pflege des Image-Katalogs, die Bereitstellung und Verwaltung von Instanzen usw.
 
