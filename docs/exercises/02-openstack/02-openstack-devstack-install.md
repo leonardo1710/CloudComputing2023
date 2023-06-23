@@ -68,6 +68,10 @@ Devstack installiert und deinstalliert Applikationen in seiner Entwicklungsumgeb
 * SSH Server (optional)
 
 ### DevStack User anlegen
+::: warning Hinweis
+Alle folgende Commands müssen auf der Zielmaschine (VM) ausgeführt werden. Z.B. via SSH
+::: 
+
 DevStack sollte als Non-Root-User mit aktiviertem ``sudo`` ausgeführt werden.
 Zur Erstellung eines Users ``stack`` mit dem DevStack operiert wird:
 

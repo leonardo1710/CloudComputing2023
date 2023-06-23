@@ -11,6 +11,11 @@ sidebar: auto
 
 [Zum Arbeitsauftrag ->](/exercises/01-cloud-intro/01-cloud-intro)
 
+## 03 OpenStack Installation
+- Einrichten der VM
+- Installation von OpenStack mit DevStack
+
+[Zum Arbeitsauftrag ->](/exercises/02-openstack/02-openstack-devstack-install)
 
 <!--
 
