@@ -2,9 +2,6 @@
 lang: de-DE
 title: 03 Installation und Setup OpenStack
 sidebar: auto
-next:
-text: 'OpenStack Components'
-link: '/exercises/02-openstack/02-openstack-components'
 ---
 
 # {{ $frontmatter.title }}

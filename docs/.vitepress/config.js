@@ -19,10 +19,7 @@ export default {
         text: 'Exercises',
         items: [
           { text: "01 Cloud Provider Recherche", link: "/exercises/01-cloud-intro/01-cloud-intro" },
-          { text: "03 OpenStack Installation", link: "/exercises/02-openstack/02-openstack-devstack-install" },
-          /*
- { text: "02 OpenStack Components", link: "/exercises/02-openstack/02-openstack-components" },
- { text: "IaaS", link: "/lectures/03-iaas/03-iaas" },*/
+          { text: "03 OpenStack Installation", link: "/exercises/02-openstack/02-openstack-devstack-install" }
         ],
       },
       { text: 'About', link: '/about/index' },
