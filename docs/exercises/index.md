@@ -17,19 +17,16 @@ sidebar: auto
 
 [Zum Arbeitsauftrag ->](/exercises/02-openstack/02-openstack-devstack-install)
 
+## 03 IaaS
+Erstellung von IaaS Ressourcen in OpenStack
+- Private Network
+- Virtuelle Maschine
+- Security Groups
+- SSH Verbindung einrichten
+
+[Zum Arbeitsauftrag ->](/exercises/03-iaas/03-vm-openstack)
+
 <!--
-
-## 03 IaaS und Vorbereitung VCS
-- Erstellung einer VM in Azure
-- Automatische Konfiguration einer VM mit Cloud-init
-- Vorbereitung VCS und GIT
-
-<p>
-<a href="/CloudComputingCWA2021/exercises/03-iaas/03-iaas" class="nav-link action-button">
-  Zur Übung →
-</a>
-</p>
-
 ## 04 Versionskontrolle und Kollaboration mit GIT
 - Repository klonen
 - Neues Remote Repository anlegen
