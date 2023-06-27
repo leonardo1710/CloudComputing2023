@@ -1,8 +1,8 @@
 ---
 sidebar: auto
 prev:
-    text: 'OpenStack Components'
-    link: '/exercises/02-openstack/02-openstack-components'
+    text: 'OpenStack Installation'
+    link: '/exercises/02-openstack/02-openstack-install'
 ---
 
 # Create and Manage IaaS Resources in OpenStack
@@ -221,7 +221,26 @@ It's important to consider the security implications of allowing all ICMP traffi
 :::
 
 Secondly, create another rule and select ``SSH``. Under `CIDR` you could specify a specific IP address that should be allowed to access via SSH. 
-We will leave ``0.0.0.0/0`` to allow SSH from all IP addresses connected to the network.
+In our example we want the Host VM to have access to the instance. For that we first need to get the Host VM IP address that will access the instance:
+Use the following command in your Host VM to display the routing table, which contains information about how network traffic should be forwarded:
+````shell
+$ ip route show
+````
+
+An example output can be the following:
+
+````shell
+default via 10.140.0.1 dev ens18 proto static
+10.140.0.0/24 dev ens18 proto kernel scope link src 10.140.0.72
+172.24.4.0/24 dev br-ex proto kernel scope link src 172.24.4.1
+192.168.72.0/24 dev ens19 proto kernel scope link src 192.168.72.1
+192.168.122.0/24 dev virbr0 proto kernel scope link src 192.168.122.1 linkdown
+````
+
+To know which IP address will be used to communicate with our subnet we need to first check the Routers subnet in the IP address.
+In my case the router uses ``172.24.4.139`` interface as **external gateway**, which means the IP address `172.24.4.0/24` of my host machine is the interface that will be used, since they both user 172 as subnet.
+Therefore, I will use``172.24.4.0/24`` in **CIDR**.
+You can also keep the default of ``0.0.0.0/0`` which allows all machines of that subnet to connect to the instance.
 
 ::: danger Attention
 Never allow SSH access from all IP addresses in a public cloud deployment!
@@ -272,7 +291,7 @@ The private key is saved in the default location of ``/home/<your_name>/.ssh/id_
 To view the contents of the public key, use ``cat /home/<your_name>/.ssh/id_rsa.pub``.
 E.g.:
 ````shell
-$ cat /home/leon/.ssh/id_rsa2.pub
+$ cat /home/leon/.ssh/id_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCf+Jxk/vkBVaka5sRQsmtuVQcfVYAS3n2GX3Uc3YdYxzO1G6f8VYr9smte34Gkt3VQ4NJ8Vv1ePbiM+GyYwAgNIYOOBJogViQ44MRrXGuruu5azB+aSVWSdC7kh79wESJwlGpOF4MngxZEvK9p95c8OpDpH6FrptHf/TSWL1p68VzQN8am9F0a4yAeVJwI1w0cJ6rfkP+p9EppKkwX+CCl0Sv9IMt8dT9ncgnjsa9XCF404ZiMsPpEHPhydwtQpPyFUZtJ789bGyAZ6ANLub1LG/o6jLYGEmoo23KEDEf4dWZL4pEuKi89KOyx0XCk7Kbn9KF/w4dhyscgwWrK7vZTrk8VO1EevMTpqfVkpXo+SXXYvZ+adUPVYOaeT0RQQSUMeWh3rFhMmCX231Vaz9ohl5RS6xKZOucT4+5633tAH/WeNlLaRQuIJoabqH3JVq/X1pz2YeANB3zqFiqG+Kxsg8UVP0Y/Ur5y5+WjSsul4mh3FsXFjcywh89uIHp9vy0= leon@cwa-devstack
 ````
 
@@ -286,14 +305,119 @@ To create an instance, begin by navigating to **Project -> Compute -> Instances*
 ![Launch Instance](./img/launch_instance.png)
 *Launch Instance*
 
-### Use Openstack CLI
+In the Details view set a name for the instance, eg.: ``mystation``. Leave `nova` as default Availability Zone.
 
+**Count** controls the number of instances spawned. We will create only 1 instance.
 
-### VM über Dashboard anlegen
+![Launch Instance](./img/launch_instance1.png)
+*Instance Details*
 
-### VM über CLI anlegen
+In the Source tab select the ``cirros`` image (tab the **up-arrow**) and leave default configurations:
 
-### SSH zur VM
+* Select Boot Source: Image
+* Create New Volume: yes
+* Delete Volume on Instance Delete: No
+* Volume Size: 1GB
 
-### VPN
+![Launch Instance](./img/launch_instance2.png)
+*Instance Source*
+
+Next, move to the Flavor tab. 
+Flavors are a way to define the VCPUs, RAM, and Disk space used by an instance. 
+Pre-built flavors are available for you. For this step, select an appropriate flavor from the options under the Available heading, for example the m1.tiny flavor. 
+Click the **up arrow** to move it to the **Allocated** section.
+
+![Launch Instance](./img/launch_instance3.png)
+*Instance Flavor*
+
+In the ``Networks`` section, you specify the network with which the instance is associated. 
+Select the ``private`` network created previously.
+
+You should only expose portions of your network as necessary. 
+This reduces the attack surface and improves application security. 
+If a private network is not created and an instance is created in a default cloud, it is associated with the ``public`` network. 
+This means the instance consumes a public IP and it could be reached over the Internet.
+
+![Launch Instance](./img/launch_instance4.png)
+*Instance Network*
+
+Next, skip over the Network Ports tab and move to the **Security Groups**.
+This is where you select security groups for the instance. 
+Click the **up arrow** to move the SSH security group to the ``Allocated`` section.
+![Launch Instance](./img/launch_instance5.png)
+*Instance Security Groups*
+
+As the final step, move to the **Key Pair** tab.
+
+In this section, you specify an SSH public key to inject into the instance. 
+You can upload your key at this stage using this form using the Import Key Pair button. 
+You can also create a key pair on this tab.
+Click on ``Import Key Pair`` as shown in the image below:
+
+![Launch Instance](./img/launch_instance6.png)
+*Import Key Pair*
+
+Provide a name for your key, e.g. ``ssh-key`` and select Key Type `SSH Key`.
+In the **Public Key** section paste your public key you saved from before and click ``Import Key Pair`` button:
+
+![Launch Instance](./img/launch_instance7.png)
+*Import Key Pair 2*
+
+Once the public key is imported, create the instance by clicking ``Launch Instance``.
+
+The instance goes through a **build** process. Allow a few minutes for this to occur. When complete, the instance appears in the Instances Listing page.
+
+If everything worked out find, your list of instances should look like the following:
+
+![Launch Instance](./img/instance_list.png)
+*Newly created instance*
+
+## Assign and Attach a Floating IP
+The instance created previously is associated with a private network.
+In the context of OpenStack and other cloud computing platforms, a floating IP (also known as a public IP or external IP) is an IP address that is associated with a virtual machine instance or resource within a private network. 
+It allows the instance to communicate with external networks and be accessed from the internet.
+You can associate the floating IP with the instance by assigning it to the instance's network interface. This binding establishes a link between the floating IP and the private IP of the instance.
+In this section, we will learn how to allocate a floating IP and attach it to this instance.
+
+To allocate a floating IP, first navigate to **Project -> Network -> Floating IPs**. 
+Then click ``Allocate IP to Project``.
+
+![Allocate Floating IP](./img/floating_ip.png)
+*Allocate Floating IP*
+
+In the popup, make sure Pool is set to ``public`` (and optionally add a description) and then click Allocate IP to add this floating IP address for use.
+You will see that the floating IP belongs to the subnet your router is using. In my case ``172.24.4.110``:
+
+![Allocate Floating IP](./img/floating_ip2.png)
+*Allocate Floating IP subnet*
+
+In the same section, allocate the IP to the instance by clicking the Associate button at the far right.
+This will bridge all incoming traffic to, in my case, ``172.24.4.110`` to subnet internal ip address (e.g. ``192.168.0.148``).
+
+![Associate Floating IP](./img/associate_floating_ip.png)
+*Associate Floating IP with instance*
+
+## Login via SSH
+Now to login to your instance via SSH your need to run ``ssh`` command with your corresponding floating ip address and the path to your public key file.
+In my case:
+
+````shell
+ssh -i /home/leon/.ssh/id_rsa cirros@172.24.4.110
+````
+
+If asked for a password, the default password in a CirrOS image is ``gocubsgo``.
+
+## Troubleshooting
+If you face any problems connecting to your instance, please first double check if you did all steps from above.
+
+Try to ping your instance from your Host VM:
+````shell
+$ ping <YOUR_INSTANCE_FLOATING_IP>
+````
+
+If you cannot ping your instance, try to ping the router the same way. You can find the routers IP address in routers section or Network Topology.
+If you can ping your router but not your instance, there may be a wrong SSH CIDR defined in your security group rules.
+Try to add a rule which accepts all SSH traffic (eg ``0.0.0.0/0`) and check SSH again.
+
+If nothing works, please feel free to ask in the Moodle Forum.
 

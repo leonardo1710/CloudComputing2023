@@ -3,8 +3,8 @@ lang: de-DE
 title: 02 Installation und Setup OpenStack
 sidebar: auto
 next:
-  text: 'OpenStack Components'
-  link: '/exercises/02-openstack/02-openstack-components'
+  text: 'IaaS in OpenStack'
+  link: '/exercises/03-iaas/03-vm-openstack'
 ---
 
 # {{ $frontmatter.title }}
