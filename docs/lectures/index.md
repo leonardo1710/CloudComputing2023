@@ -40,19 +40,27 @@ sidebar: auto
 
 [Zur Einheit ->](/lectures/03-iaas/03-iaas)
 
-[Zur Übung ->](/exercises/02-openstack/02-openstack-devstack-install)
+[Zum Arbeitsauftrag ->](/exercises/02-openstack/02-openstack-devstack-install)
 
 
-<!--
-## 04 Automatisierung - VCS (GIT), Continuous Integration und Continuous Deployment
+## 04 Platform-as-a-Service und Version Control - PaaS (Teil 1)
 
+- Definition von PaaS
+- Anwendungsbereiche und Vorteile
 - Continuous Integration (CI)
 - Continuous Deployment (CD)
 - Version Control Systems (VCS)
   - Ziele von VCS
   - GIT
 
-## 05 Platform-as-a-Service - PaaS
+[Zur Einheit ->](/lectures/05-paas/05-paas)
+
+[Zum Arbeitsauftrag 1 ->](/exercises/04-git/04-git)
+
+[Zum Arbeitsauftrag 2 ->](/exercises/04-git/04-git2)
+
+<!--
+## 05 CI/CD Workflows - PaaS (Teil 2)
 
 - Definition von PaaS
 - Anwendungsbereiche und Vorteile

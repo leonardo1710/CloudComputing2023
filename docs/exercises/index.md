@@ -26,19 +26,17 @@ Erstellung von IaaS Ressourcen in OpenStack
 
 [Zum Arbeitsauftrag ->](/exercises/03-iaas/03-vm-openstack)
 
-<!--
+
 ## 04 Versionskontrolle und Kollaboration mit GIT
-- Repository klonen
-- Neues Remote Repository anlegen
+- Git Basics (klonen, commit, push/pull, merge und branch)
+- Neues Remote Repository anlegen (GitHub)
 - Kollaboratives Arbeiten am Projekt (Branching und Merging)
 
-<p>
-<a href="/CloudComputingCWA2021/exercises/04-git/04-git" class="nav-link action-button">
-  Zur Übung →
-</a>
-</p>
+[Zum Arbeitsauftrag 1 ->](/exercises/04-git/04-git)
 
+[Zum Arbeitsauftrag 2 ->](/exercises/04-git/04-git2)
 
+<!--
 ## 05 CI/CD Pipeline
 - Erstellung eines GitHub Actions Workflow
 - Konfiguration des Workflow

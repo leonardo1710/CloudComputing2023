@@ -12,7 +12,8 @@ export default {
         text: "Lectures",
         items: [
           { text: "01 Cloud Intro", link: "/lectures/01-cloud-intro/01-cloud-intro" },
-          { text: "03 IaaS", link: "/lectures/03-iaas/03-iaas" }
+          { text: "03 IaaS", link: "/lectures/03-iaas/03-iaas" },
+          { text: "04 PaaS - VCS", link: "/lectures/05-paas/05-paas" }
         ],
       },
       {
@@ -21,6 +22,8 @@ export default {
           { text: "01 Cloud Provider Recherche", link: "/exercises/01-cloud-intro/01-cloud-intro" },
           { text: "02 OpenStack Installation", link: "/exercises/02-openstack/02-openstack-devstack-install" },
           { text: "03 IaaS in Openstack", link: "/exercises/03-iaas/03-vm-openstack" },
+          { text: "04.1 Paas - Git", link: "/exercises/04-git/04-git" },
+          { text: "04.2 Paas - Team Git", link: "/exercises/04-git/04-git2" },
         ],
       },
       { text: 'About', link: '/about/index' },
