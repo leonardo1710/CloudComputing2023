@@ -9,7 +9,7 @@ sidebar: auto
 # Aufbau einer CI/CD Pipeline mit Github Actions und Github Pages
 
 ## Aufgabenstellung
-* Erstellen eines neuen Team-Repositories
+Nutzt das beim Git Arbeitsauftrag zur Verfügung gestellte Repository für folgende Aufagaben
 * Erstellen eines Github Actions Workflows
 * Konfiguration des Workflows
 * Auto-deploy bei Push in einen Branch
@@ -20,35 +20,13 @@ sidebar: auto
 * Installation [GIT](https://git-scm.com/downloads)
 * Account bei [GitHub](https://github.com/)
 
-## Erstellen eines Team-Repository
-::: warning Achtung
-Wie in der letzten Einheit muss dieser Schritt nur von 1 Person im Team gemacht werden. Generell ist es nicht notwendig, dass alle Teammitglieder das Projekt klonen. Es kann zusammen an einem Projekt via Screensharing gearbeitet werden.
-:::
-
-Ein Repository der [Source Applikation](https://github.com/leonardo1710/webapp) auf Github anlegen. Damit das etwas simpler als in der letzten Übung gestaltet wird, wurde die Applikation als Template hinterlegt. Zum Erstellen eines Remote-Repository für das Team muss nur auf `Use this template` geklickt werden:
-
-![Repo anlegen](./img/clone_project_1.png)
-
-Danach kann direkt ein neues Repository angelegt werden. Hier einen **Namen** für das Projekt vergeben und die Einstellung **public** auswählen.
-
-![Repo erstellen](./img/clone_project_2.png)
-
-### Klonen des Projekts
-Jetzt kann das Repository geklont werden - also lokal auf euren PC. Für diese Übung muss das nur eine Person aus eurem Team machen, wenn ihr wollt können natürlich auch alle vom Team das Projekt klonen.
-
-Zur Erinnerung, das ging mit dem Command:
-``` git
-git clone <YOUR-REPO-LINK>
-```
-Bevor wir die CI/CD Pipeline einrichten, kurz ein paar Hintergrundinformationen zu Github Actions und Github Pages.
-
 ## Was ist Github Actions?
-Mit [Github Actions](https://docs.github.com/en/actions) können Prozesse (Build, Test und Deployment) eines Projekts direkt von Github aus automatisiert werden. Diese Prozesse können durch bestimmte Ereignisse ausgelöst werden, wie z. B. das Pushen von Code, neue Releases usw.
+[Github Actions](https://docs.github.com/en/actions) ist ein Entwicklungsservice des PaaS-Layer.
+Mit Github Actions können Prozesse (Build, Test und Deployment) eines Projekts direkt von Github aus automatisiert werden. 
+Diese Prozesse können durch bestimmte Ereignisse ausgelöst werden, wie z. B. das Pushen von Code, neue Releases usw.
 
 Github Actions sind ereignisgesteuert: Durch festlegen von Befehlen, die ausgeführt werden sollen, wenn bestimmte Ereignisse (z. B. push to /main branch) eintreten. 
-Stand 2021 sind in Github Actions 2000 Gratisminuten für private Repositories und unlimitierte Minuten für public Repositories verfügbar.
-
-![event driven](https://docs.github.com/assets/images/help/images/overview-actions-simple.png)
+Stand 2023 sind in Github Actions 2000 Gratisminuten für private Repositories und unlimitierte Minuten für public Repositories verfügbar.
 
 ### Komponenten von Github Actions:
 #### Workflows
@@ -63,7 +41,7 @@ Actions sind die kleinste Komponente eines jeden Workflows. Actions können entw
 #### <a name="runner">Runner</a>
 Runner sind die Server, auf denen die Workflows laufen. Github bietet einige vordefinierte Runner, die verwendet werden können. Es ist auch möglich, einen eigenen Runner zu hosten. Wenn Runner von Github selbst verwendet werden, kann zwischen verschiedenen Betriebssystem-Runnern gewählt werden: Ubuntu Linux, Microsoft Windows oder macOS.
 
-![Github Actions Komponenten](https://docs.github.com/assets/images/help/images/overview-actions-design.png)
+![Github Actions Komponenten](https://docs.github.com/assets/cb-25535/mw-1440/images/help/actions/overview-actions-simple.webp)
 
 ## Was ist GitHub Pages?
 GitHub Pages ist ein Static Site Hosting Service, mit dem Webpages direkt aus einem GitHub Repository deployed werden können. 
@@ -83,7 +61,7 @@ Standardmäßig wird bei GitHub Pages ein Branch namens `gh-pages` als Deploymen
 Würden wir das Projekt manuell deployen, würden die Schritte wie folgt aussehen:
 1. Branch mit Source Files auschecken
 2. Dependencies der Applikation installieren (bspw. mit `npm i`)
-3. Statische Files des Sourcecode generieren und Files "bundlen" -> sozusagen der **Build Step**. Das Beispielprojekt verwendet hierzu [Webpack](https://webpack.js.org/). Für die Übung ist das aber irrelevant. In der Applikation wird der Buildprozess mit dem Command  `npm run build` ausgeführt. Dabei wird ein `/dist` Folder mit den zu hostenden Files erstellt.
+3. Projekt Build -> Statische Files des Sourcecode generieren. In der zur verfügung gestellten Applikation wird der Buildprozess mit dem Command  `npm run docs:build` ausgeführt. Dabei wird ein `/dist` Folder mit den zu hostenden Files erstellt.
 4. Die statischen Files bzw. der `/dist` Folder müssen dann auf einen Webserver transferiert werden
 
 ## Erstellung eines GitHub Actions Workflow
@@ -127,7 +105,7 @@ jobs:
 Dann muss ein Commit erstellt werden, damit das yml-File in eurem Repository ist. Das kann über die Github GUI gemacht werden, wenn man auf `Start commit` klickt. Hier muss nur mehr eine Commit Message eingegeben werden.
 ![Workflow in Github Actions anlegen](./img/setup_workflow2.png)
 
-Damit ihr das neue yml-File auch lokal im `.github/workflows/` Ordner habt, müsst ihr noch die Änderung von der Remote pullen:
+Damit ihr das neue yml-File auch **lokal** im `.github/workflows/` Ordner habt, müsst ihr noch die Änderung von der Remote pullen:
 
 ``` git
 git pull
@@ -159,9 +137,9 @@ Jeder Workflow kann dann, für weitere Details, angeklickt werden. In diesem Fal
 ![Workflow Details](./img/workflow_details.png)
 
 ## Workflow adaptieren
-Im nächsten Schritt werden wir den Workflow so aktualisieren, dass der vorher beschriebene **manuelle Build** automatisiert ausgeführt wird. Im Falle unserer  Applikation muss zuerst der Befehl `npm run build` ausgeführt werden. Um `npm` Befehle ausführen zu können, muss auf der Instanz **Node.js** installiert werden. Dazu verwenden wir eine andere offizielle GitHub-Action, die `setup-node-action`.
+Im nächsten Schritt werden wir den Workflow so aktualisieren, dass der vorher beschriebene **manuelle Build** automatisiert ausgeführt wird. Im Falle unserer  Applikation muss zuerst der Befehl `npm run docs:build` ausgeführt werden. Um `npm` Befehle ausführen zu können, muss auf der Instanz **Node.js** installiert werden. Dazu verwenden wir eine andere offizielle GitHub-Action, die `setup-node-action`.
 
-Dazu werden erstmal die `echo` und `ls` Commands aus dem Skript gelöscht und mit denen genannten ersetzt:
+Dazu werden erstmal die `echo` und `ls` Commands aus dem Skript gelöscht und durch die Genannten ersetzt:
 
 ::: details main.yml File
 
@@ -171,20 +149,25 @@ name: Deploy to GitHub Pages
 on:
   push: 
     branches: [ release ] # is triggered if push event in release branch occurs
-
 jobs:
   build:
     runs-on: ubuntu-latest # run ubuntu
 
     steps:
-    - uses: actions/checkout@v2 # checkout your repo - this is an official action provided by GitHub
+      - name: Checkout
+        uses: actions/checkout@v2 # checkout your repo - this is an official action provided by GitHub
 
-    - name: Generate static vuepress files
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-    - run: npm i # install dependencies
-    - run: npm run build # run build
+      - name: Set up Node environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Build project files
+        run: npm run docs:build
+
 ```
 
 :::
@@ -193,7 +176,11 @@ Nach dem nächsten gepushten Commit in den `release` Branch, sollte die Action n
 
 ![Workflow with npm](./img/npm_workflow.png)
 
-Wenn ihr euch an die Schritte beim manuellen Deployment erinnert, muss jetzt nur noch der generierte `/dist` folder in das **Publishing Directory** eurer GitHub Pages Site gepusht werden. In einem manuellen Setup würde man dazu in den Ordner, in dem die Files generiert wurden, wechseln. Dieser würde schlussendlich als neues Git Repository initialisiert und die enthaltenen Files in das Publishing Directory (`gh-pages`) gepusht werden. Genau das werden wir jetzt automatisiert machen:
+Damit wir den Workflow für das Deployment auf Github Pages einrichten können, muss Pages aktiviert werden. In Github unter ``Settings`` -> `Pages` muss als Source `Github Actions` ausgewählt werden:
+![GH Pages aktivieren](./img/gh_pages_aktivieren.png)
+
+Wenn ihr euch an die Schritte beim manuellen Deployment erinnert, muss jetzt nur noch der generierte `/dist` Folder in das **Publishing Directory** eurer GitHub Pages Site gepusht werden. 
+Hierzu stellt Github Actions auch einige vorgefertigte Actions zur Verfügung. Einerseits müssen die Berechtigungen zum Schreiben in GH-Pages hinterlegt werden, andererseits muss der Pfad zum ``/dist`` Folder bekanntgegeben werden:
 
 ::: details main.yml File
 
@@ -203,56 +190,59 @@ name: Deploy to GitHub Pages
 on:
   push: 
     branches: [ release ] # is triggered if push event in release branch occurs
-
 jobs:
   build:
     runs-on: ubuntu-latest # run ubuntu
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
 
     steps:
-    - uses: actions/checkout@v2 # checkout your repo - this is an official action provided by GitHub
+      - name: Checkout
+        uses: actions/checkout@v2 # checkout your repo - this is an official action provided by GitHub
 
-    - name: Generate static vuepress files
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.x' # install node on runner
-    - run: npm i # install dependencies
-    - run: npm run build # run build
-    - name: Init new repo in dist folder and commit generated files
-      run: |
-        cd dist
-        git init
-        git add -A
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m 'deploy'
-    - name: Force push to destination branch
-      uses: ad-m/github-push-action@v0.5.0
-      with:
-        # Token for the repo. Can be passed in using $\{{ secrets.GITHUB_TOKEN }}
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        # Destination branch to push changes
-        branch: gh-pages
-        # Use force push to fully overwrite the destination branch
-        force: true
-        # We have to push from the folder where files were generated.
-        # Same were the new repo was initialized in the previous step
-        directory: dist
+      - name: Set up Node environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Build project files
+        run: npm run docs:build # creates a /dist directory with build files
+
+      - name: Setup GH Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: .vitepress/dist # path to build files directory
+
+      - name: Deploy to GH Pages # deploy
+        id: deployment
+        uses: actions/deploy-pages@v1
 ```
 :::
 
-Wenn ihr jetzt in euer Github Repository schaut, solltet ihr einerseits unter den `Actions` den Workflow einsehen können, andererseits unter euren Branches einen Branch `gh-pages` finden. Dieser wurde mithilfe des Skripts neu angelegt. In dem Branch befinden sich nur die Inhalte des `dist` Folders:
+Wenn ihr jetzt in euer Github Repository schaut, solltet ihr unter den `Actions` den Workflow einsehen können. 
+Ist der Workflow fehlerfrei durchlaufen könnt ihr unter ``Pages`` den Link zur deployten Github Page finden. Normalerweise in der Form `https://<YOUR_GITHUB_NAME.github.io/<YOUR_REPO_NAME`.
+Besucht den Link um eure Seite anzusehen.
+Sollte die VitePress Seite nicht wie erwartet aussehen (verzerrte Stylesheets), liegt das daran, dass einige Files nicht richtig geladen werden konnten. Hierzu muss im ``./vitepress/config.js`` File noch eine Projektbase hinterlegt werden, unter der deployt wird.
+Auf Github Pages ist das euer **Repository Name** ([siehe Dokumentation](https://vitepress.dev/guide/deploy#setting-a-public-base-path)):
 
-![gh-pages Branch](./img/gh_pages_repo.png)
+````js config.js
+import { defineConfig } from 'vitepress'
 
-
-## GitHub Pages aktivieren
-Nun ist der Workflow fertig konfiguriert. Jetzt muss nur mehr GitHub Pages aktiviert werden. Dazu im Repository unter `Settings` -> `Pages` als Source den `gh-pages` Branch auswählen.
-
-![setup gh-pages](./img/setup_ghpages1.png)
-
-Das Deployment der Page könnte ein paar Minuten dauern. Wartet etwas und refresht dann die Seite. Wenn GitHub Pages fertig eingerichtet ist, sollte in grün *"Your site is published at https://username.github.io/app-name/"* stehen. Klickt auf den Link um das Ergebnis zu sehen:
-
-![Gehostete Page](./img/hostet_page1.png)
+// https://vitepress.dev/reference/site-config
+export default defineConfig({
+  base: "/YOUR_REPOSITORY_NAME/",  
+  title: "Simple VitePress Site",
+  description: "Training Page for Cloud Computing Course",
+...
+````
 
 Sehr gut. Die CI/CD Pipeline ist fertig erstellt. Ab sofort wird die Seite immer automatisch neu deployed, wenn in den `release` Branch gepusht wird.
 

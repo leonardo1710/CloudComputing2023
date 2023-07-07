@@ -36,19 +36,15 @@ Erstellung von IaaS Ressourcen in OpenStack
 
 [Zum Arbeitsauftrag 2 ->](/exercises/04-git/04-git2)
 
-<!--
+
 ## 05 CI/CD Pipeline
 - Erstellung eines GitHub Actions Workflow
 - Konfiguration des Workflow
 - Autodeploy bei Push-Event auf GitHub Pages
 
-<p>
-<a href="/CloudComputingCWA2021/exercises/05-cicd/05-cicd" class="nav-link action-button">
-  Zur Übung →
-</a>
-</p>
+[Zum Arbeitsauftrag ->](/exercises/05-cicd/05-cicd)
 
-
+<!--
 ## 06.1 Docker Intro
 - Ausprobieren von Docker Commands im Docker Playground
 - Kennenlernen des Docker Environments
