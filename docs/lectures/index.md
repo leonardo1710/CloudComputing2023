@@ -59,7 +59,7 @@ sidebar: auto
 
 [Zum Arbeitsauftrag 2 ->](/exercises/04-git/04-git2)
 
-<!--
+
 ## 05 CI/CD Workflows - PaaS (Teil 2)
 
 - Definition von PaaS
@@ -67,11 +67,9 @@ sidebar: auto
 - Erstellung eines CI/CD Workflows mit PaaS
 
 
-[Zur Einheit ->](/lectures/05-paas/05-paas)
+[Zum Arbeitsauftrag ->](/exercises/05-cicd/05-cicd)
 
-[Zur Übung ->](/exercises/05-cicd/05-cicd)
-
-
+<!--
 ## 06 Containerization
 
 - Abgrenzung Container und VM
