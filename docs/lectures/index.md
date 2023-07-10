@@ -62,14 +62,12 @@ sidebar: auto
 
 ## 05 CI/CD Workflows - PaaS (Teil 2)
 
-- Definition von PaaS
-- Anwendungsbereiche und Vorteile
-- Erstellung eines CI/CD Workflows mit PaaS
+- Erstellung eines CI/CD Workflows im PaaS-Layer (Github Actions)
 
 
 [Zum Arbeitsauftrag ->](/exercises/05-cicd/05-cicd)
 
-<!--
+
 ## 06 Containerization
 
 - Abgrenzung Container und VM
@@ -81,10 +79,11 @@ sidebar: auto
 
 [Zur Einheit ->](/lectures/06-containerization/06-containerization)
 
-[Zur Übung (Teil 1) ->](/exercises/06-containerization/06-containerization)
+[Zum Arbeitsauftrag (Teil 1) ->](/exercises/06-containerization/06-containerization)
 
-[Zur Übung (Teil 2) ->](/exercises/06-docker/06-docker)
+[Zum Arbeitsauftrag (Teil 2) ->](/exercises/06-docker/06-docker)
 
+<!--
 
 ## 07 Cloud Native Development
 - Microservice Architektur
@@ -94,10 +93,10 @@ sidebar: auto
 
 [Zur Einheit ->](/lectures/07-cloud-native/07-cloud-native)
 
-[Zur Übung ->](/exercises/06-docker-compose/06-docker-compose)
+[Zum Arbeitsauftrag ->](/exercises/07-docker-compose/07-docker-compose)
 
 
-## 07.1 Cloud Monitoring
+## 08 Cloud Monitoring
 
 - Periodische Checks
 - Featuretests
@@ -109,10 +108,10 @@ sidebar: auto
 
 [Zur Einheit ->](/lectures/08-monitoring/08-monitoring)
 
-[Zur Übung ->](/exercises/08-casestudy/08-casestudy)
+[Zum Arbeitsauftrag ->](/exercises/08-monitoring/08-monitoring)
 
 
-## 08 Security
+## 09 Security
 
 * Symmetric Cryptography
 * Hashes/MACs
@@ -130,7 +129,7 @@ sidebar: auto
 * Präsentation am 14.1.2022
 
 
-[Zur Übung ->](/exercises/08-casestudy/08-casestudy)
+[Zum Arbeitsauftrag ->](/exercises/08-casestudy/08-casestudy)
 
 
 ## 10 Anything-as-a-Service - XaaS
@@ -142,7 +141,7 @@ sidebar: auto
 
 [Zur Einheit ->](/lectures/09-xaas/09-xaas)
 
-[Zur Übung ->](/exercises/09-caas/09-caas)
+[Zum Arbeitsauftrag ->](/exercises/09-caas/09-caas)
 
 
 ## 11 Serverless
@@ -152,7 +151,7 @@ sidebar: auto
 - Serverless in Azure
 
 
-[Zur Einheit ->](/lectures/10-serverless/10-serverless)
+[Zum Arbeitsauftrag ->](/lectures/10-serverless/10-serverless)
 
 [Zur Übung ->](/exercises/10-faas/10-faas)
 

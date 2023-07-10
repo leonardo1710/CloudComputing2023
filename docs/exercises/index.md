@@ -44,16 +44,12 @@ Erstellung von IaaS Ressourcen in OpenStack
 
 [Zum Arbeitsauftrag ->](/exercises/05-cicd/05-cicd)
 
-<!--
+
 ## 06.1 Docker Intro
 - Ausprobieren von Docker Commands im Docker Playground
 - Kennenlernen des Docker Environments
 
-<p>
-<a href="/CloudComputingCWA2021/exercises/06-containerization/06-containerization" class="nav-link action-button">
-  Zur Übung →
-</a>
-</p>
+[Zum Arbeitsauftrag ->](/exercises/06-containerization/06-containerization)
 
 ## 06.2 Docker Advanced
 - Docker Recap
@@ -63,12 +59,9 @@ Erstellung von IaaS Ressourcen in OpenStack
 - Container Ports
 - Docker Layer Caching (DLC)
 
-<p>
-<a href="/CloudComputingCWA2021/exercises/06-docker/06-docker" class="nav-link action-button">
-  Zur Übung →
-</a>
-</p>
+[Zum Arbeitsauftrag ->](/exercises/06-docker/06-docker)
 
+<!--
 ## 07 Docker-Compose
 - Docker Compose
 - Microservices

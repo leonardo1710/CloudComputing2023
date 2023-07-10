@@ -13,7 +13,9 @@ export default {
         items: [
           { text: "01 Cloud Intro", link: "/lectures/01-cloud-intro/01-cloud-intro" },
           { text: "03 IaaS", link: "/lectures/03-iaas/03-iaas" },
-          { text: "04 PaaS", link: "/lectures/05-paas/05-paas" }
+          { text: "04 PaaS", link: "/lectures/05-paas/05-paas" },
+          { text: "06 Container", link: "/lectures/06-containerization/06-containerization" },
+
         ],
       },
       {
@@ -25,6 +27,8 @@ export default {
           { text: "04.1 Paas - Git", link: "/exercises/04-git/04-git" },
           { text: "04.2 Paas - Team Git", link: "/exercises/04-git/04-git2" },
           { text: "05 Paas - CI/CD", link: "/exercises/05-cicd/05-cicd" },
+          { text: "06.1 Container Playground", link: "/exercises/06-containerization/06-containerization" },
+          { text: "06.2 Docker", link: "/exercises/06-docker/06-docker" },
 
         ],
       },
