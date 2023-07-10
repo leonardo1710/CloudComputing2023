@@ -293,7 +293,7 @@ if __name__ == '__main__':
 ```
 Das `/02-server/Dockerfile` zeigt ein Image Setup, das typischerweise für Python Web Apps verwendet wird:
 
-``` dockerfile
+``` Dockerfile
 FROM  python:3.6   
 # Create a directory
 WORKDIR /app                  
