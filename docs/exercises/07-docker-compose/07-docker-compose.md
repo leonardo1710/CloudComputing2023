@@ -277,7 +277,7 @@ Eine Microservice Architektur führt zu:
 
 Für diese Aufgabe switcht in das Directory `05-microservices`:
 ``` shell
-cd <PATH_WHERE_YOU_SAVED_REPO>/cloud-docker-exercises/05-compose/webapp
+cd <PATH_WHERE_YOU_SAVED_REPO>/cloud-docker-exercises/05-microservices/webapp
 ```
 Der `webapp` Folder besteht jetzt aus einer `book-api` und einem `front-end` Folder. Beide sind Flask Apps, die unabhängig von einander sind - also Microservices darstellen.
 Der Fokus bei der Aufgabe wird die Kommunikation von Microservices mittels Docker-Compose sein und nicht die Entwicklung der Applikationen. Der Code wird euch in den folgenden Schritten zur Verfügung gestellt.
