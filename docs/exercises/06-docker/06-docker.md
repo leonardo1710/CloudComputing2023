@@ -272,7 +272,9 @@ Unter Windows kann es sein, dass explizite Mountrechte für Docker vergeben werd
 Euer Terminal sollte bei Eingabe der Commands so aussehen:
 ![Mounting](./img/mounting.png)
 
-Wenn ihr jetzt mit eurem Host-System in euer Projekt Verzeichnis navigiert (im Explorer bspw.), solltet ihr auch hier ein File namens `textfile` im Verzeichnis haben. Mittels **Mounting** konnte also ein File in einem Container erstellt werden, das auch in einem Verzeichnis des Host erstellt wurde.
+Wenn ihr jetzt mit eurem Host-System in euer Projekt Verzeichnis navigiert (im Explorer bspw.), solltet ihr auch hier ein File namens `testfile` im Verzeichnis haben. Mittels **Mounting** konnte also ein File in einem Container erstellt werden, das auch in einem Verzeichnis des Host erstellt wurde.
+
+Zum Beenden des Terminal im Container einfach `exit` eingeben.
 
 ### 07 Docker Volumes
 **Docker Volumes sind Container, die Daten speichern und persistieren**. Diese Volumes können dann von laufenden Containern konsumiert werden - also Container können dann auf diese Daten zugreifen. Im Gegensatz zum Mounting, werden Daten also nicht auf dem Host-System abgelegt, sondern in einem Volume Container. Die anderen Container mounten dann die Volume. 
@@ -334,7 +336,7 @@ docker run python-webapp
 
 Sollte euch das Terminal eine IP-Adresse mit dem Port 5000 angeben. In meinem Fall ist es `http://172.12.02:5000`.Versucht die Applikation einmal in einem Browser aufzurufen.
 
-Das funktioniert noch nicht, weil wir den 2. notwendigen Schritt, das **Port-Mapping**, noch nicht eingerichtet haben. 
+Das funktioniert nicht, weil wir den 2. notwendigen Schritt, das **Port-Mapping**, noch nicht eingerichtet haben. 
 
 > Stoppt den Flask Server mit `CTRL + C`.
 

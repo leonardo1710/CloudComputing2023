@@ -165,7 +165,7 @@ Mit den Namen, die wir im `docker-compose ps` Befehl sehen können, können wir 
 Ebenfalls mit dem Namen können wir einen getaggten Container mit `docker-compose rm` auch wieder Entfernen. Führen wir danach `docker-compose up` aus wird dieser auch neu erzeugt.
 
 ## Arbeitsauftrag
-Zum Start der Übung navigiert im Projekt (vom vorherigen Arbeitsauftrag [siehe](https://github.com/leonardo1710/cloud-docker-exercises)) in den Folder `04-compose` und seht euch das bereitgestellte `docker-compose.yml` an:
+Zum Start der Übung navigiert im Projekt (vom vorherigen Arbeitsauftrag [siehe](https://github.com/leonardo1710/cloud-docker-exercises)) in den Folder `04-compose/webapp` und seht euch das bereitgestellte `docker-compose.yml` an:
 ``` shell
 cd <PATH_WHERE_YOU_SAVED_REPO>/cloud-docker-exercises/04-compose/webapp
 ```
@@ -559,6 +559,9 @@ Fürs publizieren der Images, müssen diese vorher getaggt werden. Bitte verwend
 docker tag webapp_front-end <YOUR_USERNAME>/webapp_front-end
 docker tag webapp_book-api <YOUR_USERNAME>/webapp_book-api
 ```
+::: warning Fehlermeldung "No such image"
+Solltet ihr die Fehlermeldung "Error response from daemon: No such image" erhalten, dann habt ihr entweder vergessen die Images zu builden oder sie heißen anders. Bitte nochmal mit ```docker images``` überprüfen, wie die Images heißen.
+:::
 ![Docker Login](./img/docker_hub_tagging.png)
 
 Dann können wir die Images in das Repository pushen:
