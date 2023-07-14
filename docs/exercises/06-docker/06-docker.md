@@ -255,12 +255,18 @@ ls mounted  # show contents of mounted
 touch mounted/testfile  # create a testfile in mounted
 ```
 
+::: warning Linux/Mac User aufgepasst
+Bitte folgenden Command verwenden: ``docker run -it -v "$(pwd)":/mounted ubuntu:14.04 /bin/bash``
+:::
+
 ::: warning Windows Nutzer aufgepasst
 Unter Windows kann es sein, dass explizite Mountrechte für Docker vergeben werden müssen (*Error response from daemon: status code not OK but 500: "System.UnauthorizedAccessException..."*). Das geht so:
 * Rechtsklick auf Docker in der Taskleist
 * *"Settings"* -> *"Resources"* -> *"File Sharing"* -> Pfad zu eurem Projekt hinzufügen
 * *"Apply & Restart"* klicken
 * Bitte für den Mount-Command die Windows Powershell nutzen, da CMD den Befehl ${pwd} nicht kennt
+
+* Wird anstelle von Hyper-V **WSL2** genutzt, muss das Projekt-Verzeichnis im Verzeichnis des Windows Benutzers liegen!
 :::
 
 Euer Terminal sollte bei Eingabe der Commands so aussehen:

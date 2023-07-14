@@ -165,7 +165,7 @@ Mit den Namen, die wir im `docker-compose ps` Befehl sehen können, können wir 
 Ebenfalls mit dem Namen können wir einen getaggten Container mit `docker-compose rm` auch wieder Entfernen. Führen wir danach `docker-compose up` aus wird dieser auch neu erzeugt.
 
 ## Arbeitsauftrag
-Zum Start der Übung navigiert im Projekt in den Folder `04-compose` und seht euch das bereitgestellte `docker-compose.yml` an:
+Zum Start der Übung navigiert im Projekt (vom vorherigen Arbeitsauftrag [siehe](https://github.com/leonardo1710/cloud-docker-exercises)) in den Folder `04-compose` und seht euch das bereitgestellte `docker-compose.yml` an:
 ``` shell
 cd <PATH_WHERE_YOU_SAVED_REPO>/cloud-docker-exercises/04-compose/webapp
 ```
