@@ -83,7 +83,6 @@ sidebar: auto
 
 [Zum Arbeitsauftrag (Teil 2) ->](/exercises/06-docker/06-docker)
 
-<!--
 
 ## 07 Cloud Native Development
 - Microservice Architektur
@@ -104,13 +103,12 @@ sidebar: auto
 - Logs
 - Dashboards
 
-
-
 [Zur Einheit ->](/lectures/08-monitoring/08-monitoring)
 
+<!--
 [Zum Arbeitsauftrag ->](/exercises/08-monitoring/08-monitoring)
-
-
+-->
+<!--
 ## 09 Security
 
 * Symmetric Cryptography
@@ -119,7 +117,7 @@ sidebar: auto
 * Authentication
 * Key Distribution
 * X.509 Certificates
-
+-->
 
 ## 09 Cloud Migration Case Studies
 
@@ -128,50 +126,31 @@ sidebar: auto
 * Erstellung Präsentation
 * Präsentation am 14.1.2022
 
-
-[Zum Arbeitsauftrag ->](/exercises/08-casestudy/08-casestudy)
-
+<!--
+[Zum Arbeitsauftrag ->](/exercises/09-casestudy/09-casestudy)
+-->
 
 ## 10 Anything-as-a-Service - XaaS
 
 - Vorstellung unterschiedlichster Service Modelle
 - SaaS, FaaS, DBaaS, NaaS, CaaS, IaaS, ...
-
-
+- Serverless Computing
 
 [Zur Einheit ->](/lectures/09-xaas/09-xaas)
 
-[Zum Arbeitsauftrag ->](/exercises/09-caas/09-caas)
-
-
-## 11 Serverless
-- Serverlose Architektur
-- Herausforderungen
-- Anwendungsbeispiele
-- Serverless in Azure
-
-
-[Zum Arbeitsauftrag ->](/lectures/10-serverless/10-serverless)
-
-[Zur Übung ->](/exercises/10-faas/10-faas)
-
-## 12 Organisatorisch-rechtliche Rahmenbedingungen <Badge text="neu" />
+## 11 Organisatorisch-rechtliche Rahmenbedingungen
 - DSGVO
-- Privacy Shield
+- Privacy Shield, EU Data Act
 - SLIs, SLAs, SLOs
 - IAM - Identity Access Management
 
-<p>
-<a href="https://moodle.fh-campuswien.ac.at/mod/resource/view.php?id=509972" class="nav-link action-button">
-  Zu den Folien →
-</a>
-</p>
-  
+<!--
+[Zur Einheit ->](/lectures/10-legal/10-legal)
+  -->
 
-## 13 Prüfungsvorbereitung
-
+## 12 Abschlussprojekt und Prüfung
 - Wiederholung der Modulinhalte
 - Ausarbeitung eines Fragenkatalogs
 - Q&A
 
--->
+[Zum Abschlussprojekt ->](/exercises/12-exam/12-exam)

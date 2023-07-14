@@ -15,6 +15,9 @@ export default {
           { text: "03 IaaS", link: "/lectures/03-iaas/03-iaas" },
           { text: "04 PaaS", link: "/lectures/05-paas/05-paas" },
           { text: "06 Container", link: "/lectures/06-containerization/06-containerization" },
+          { text: "07 Cloud Native", link: "/lectures/07-cloud-native/07-cloud-native" },
+          { text: "08 Monitoring", link: "/lectures/08-monitoring/08-monitoring" },
+          { text: "10 XaaS", link: "/lectures/09-xaas/09-xaas" },
 
         ],
       },
@@ -29,6 +32,7 @@ export default {
           { text: "05 Paas - CI/CD", link: "/exercises/05-cicd/05-cicd" },
           { text: "06.1 Container Playground", link: "/exercises/06-containerization/06-containerization" },
           { text: "06.2 Docker", link: "/exercises/06-docker/06-docker" },
+          { text: "07 Docker Compose", link: "/exercises/07-docker-compose/07-docker-compose" },
 
         ],
       },

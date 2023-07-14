@@ -1,6 +1,6 @@
 ---
 lang: de-DE
-title: 09 Arbeitsauftrag Projekttage - Cloud Migration Case Study
+title: 09 Arbeitsauftrag - Cloud Migration Case Study
 sidebar: auto
 ---
 
@@ -68,6 +68,34 @@ Die Kernanwendung von GitLab ermöglicht es Software-Entwicklungsteams, in Echtz
 [Blog Beitrag - We’re moving from Azure to Google Cloud Platform](https://about.gitlab.com/blog/2018/06/25/moving-to-gcp/)
 
 [GitLab's Journey From Azure to GCP and How We Made it Happen (Cloud Next '19) VIDEO](https://www.youtube.com/watch?v=Ve_9mbJHPXQ&t=267s)
+
+
+### 5 Dropbox - Cloud to Hybrid
+Dropbox ist ein 2007 eingeführter Filehosting-Dienst des Unternehmens Dropbox Inc. mit Sitz in den USA. Legt man Dateien in einen speziellen Ordner, so wird dieser Ordner im Hintergrund mit einem auf dem Server eingerichteten Ordner repliziert.
+Dropbox hatte sein Geschäft entwickelt, indem es die Cloud - insbesondere Amazon S3 (Simple Storage Service) - nutzte, um Daten zu speichern, während die Metadaten vor Ort aufbewahrt wurden.
+Das Unternehmen befürchtete eine zu große Abhängigkeit von AWS: neben den steigenden Kosten plante AWS selbst auch einen ähnlichen Dienst (WorkDocs) zu etablieren.
+
+#### Links
+[The Epic Story of Dropbox's Exodus From the Amazon Cloud Empire](https://www.wired.com/2016/03/epic-story-dropboxs-exodus-amazon-cloud-empire/)
+
+[AWS re:Invent 2019: How Dropbox leverages hybrid cloud for scale and innovation](https://www.youtube.com/watch?v=1_hKrGjYteQ)
+
+### 6 Evernote - Bare Metal to Cloud
+Evernote (gegr. 2008) ist eine plattformübergreifende Anwendung zur Verwaltung von Notizen und Aufgaben, mit der Benutzer Ideen, Aufgaben und Termine erfassen, organisieren und verfolgen können.
+Evernote, das seit seiner Gründung seine eigenen Server und sein eigenes Netzwerk unterhielt, fühlte sich durch seine Infrastruktur zunehmend eingeschränkt. Sie war schwer zu skalieren, zeitaufwändig und teuer in der Wartung. Das Unternehmen wollte mehr Flexibilität und die Geschwindigkeit, Zuverlässigkeit, Sicherheit und Notfallplanung von Evernote verbessern. Um Serviceunterbrechungen zu minimieren, sollte die Migration von vor Ort in die Cloud so effizient wie möglich durchgeführt werden.
+
+#### Links
+[Evernote Reaches the Cloud: Migration to Google Cloud Platform Complete](https://evernote.com/blog/evernote-migration-to-google-cloud-platform/)
+
+[The Evernote Service and our options to migrate to Google Cloud Platform (Part 1)](https://evernote.com/blog/part-1-our-options-to-migrate/)
+
+[Protecting Customer Data on GCP (Part 2)](https://evernote.com/blog/part-2-protecting-customer-data-on-gcp/)
+
+[Architecture in GCP and our Technical Transformation (Part 3)](https://evernote.com/blog/part-3-the-evernote-architecture-in-gcp/)
+
+[Planning and Executing the Migration (Part 4)](https://evernote.com/blog/part-4-planning-and-executing-the-migration/)
+
+[Lessons Learned (Part 5)](https://evernote.com/blog/part-5-conclusion-and-future/)
 
 
 ## Was soll recherchiert werden?

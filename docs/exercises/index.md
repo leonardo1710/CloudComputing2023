@@ -61,7 +61,7 @@ Erstellung von IaaS Ressourcen in OpenStack
 
 [Zum Arbeitsauftrag ->](/exercises/06-docker/06-docker)
 
-<!--
+
 ## 07 Docker-Compose
 - Docker Compose
 - Microservices
@@ -69,13 +69,10 @@ Erstellung von IaaS Ressourcen in OpenStack
 - Docker Hub
 - Best Practices
 
-<p>
-<a href="/CloudComputingCWA2021/exercises/06-docker-compose/06-docker-compose" class="nav-link action-button">
-  Zur Übung →
-</a>
-</p>
+[Zum Arbeitsauftrag ->](/exercises/07-docker-compose/07-docker-compose)
 
 
+<!--
 ## 07.1 Prometheus mit Docker
 - Prometheus Setup
 - Container mit Prometheus analysieren
