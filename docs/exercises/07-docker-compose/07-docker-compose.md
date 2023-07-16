@@ -375,7 +375,9 @@ Eine Möglichkeit der Kommunikation von Services ist es, die IP Adressen herausz
 
 > Achtet darauf, dass eure Container auch laufen!
 
-Findet die Namen eurer Container mithilfer von `docker container ls` oder `docker ps` heraus. 
+Findet die Namen eurer Container mithilfe von `docker container ls` oder `docker ps` heraus. **Achtung:** die Container müssen laufen, verwendet deswegen ein zweites Terminal.
+
+``` shell
 Um mehr Informationen zu euren Containern anzuzeigen können wir den `docker inspect` Command verwenden:
 
 ``` shell

@@ -33,6 +33,8 @@ export default {
           { text: "06.1 Container Playground", link: "/exercises/06-containerization/06-containerization" },
           { text: "06.2 Docker", link: "/exercises/06-docker/06-docker" },
           { text: "07 Docker Compose", link: "/exercises/07-docker-compose/07-docker-compose" },
+          { text: "08 Cloud Monitoring", link: "/exercises/08-monitoring/08-monitoring" },
+          { text: "09 Migration Case Study", link: "/exercises/09-casestudy/09-casestudy" },
 
         ],
       },

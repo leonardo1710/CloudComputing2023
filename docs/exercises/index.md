@@ -71,18 +71,15 @@ Erstellung von IaaS Ressourcen in OpenStack
 
 [Zum Arbeitsauftrag ->](/exercises/07-docker-compose/07-docker-compose)
 
+## 08 Cloud Monitoring
+- Prometheus und Grafana Setup
+- Web App mit Prometheus und Grafana analysieren
+
+
+[Zum Arbeitsauftrag ->](/exercises/08-monitoring/08-monitoring)
+
 
 <!--
-## 07.1 Prometheus mit Docker
-- Prometheus Setup
-- Container mit Prometheus analysieren
-
-<p>
-<a href="/CloudComputingCWA2021/exercises/07-monitoring/07-monitoring" class="nav-link action-button">
-  Zur Übung →
-</a>
-</p>
-
 ## 09 Cloud Migration Case Study - Projekttage
 - Ausarbeitung einer Case Study
 - Recherche zu Cloud Migration Strategie eines ausgewählten Unternehmens

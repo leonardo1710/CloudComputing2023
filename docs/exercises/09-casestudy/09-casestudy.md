@@ -7,14 +7,12 @@ sidebar: auto
 # {{ $frontmatter.title }}
 
 ## Aufgabenstellung
-* Ausarbeitung der Case Studies (eine je Gruppe)
+* Ausarbeitung der Case Studies (eine je Gruppe - **max. 4 Personen**)
   * Details siehe Punkt "Was soll recherchiert werden?"
   * Links für mögliche Ansätze zur Recherche findet ihr bei den Case Studies
 * Erstellung einer Präsentation der Punkte
 * Länge Präsentation: mind. 20 Minuten
-* Präsentation am 14.1.
 * Abgabe der Präsentation auf Moodle
-
 
 ## Case Studies
 

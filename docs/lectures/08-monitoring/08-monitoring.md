@@ -19,7 +19,7 @@ Folgender Abschnitt beschreibt Monitoringtypen und deren praktische Umsetzung.
 
 ![Cloud Monitoring](./img/cloud_monitoring.png)
 
-### Periodische Checks
+## Periodische Checks
 
 Eine der klassischsten Formen des Monitoring sind periodische Checks/Prüfungen. Bei periodischen Prüfungen wird eine bestimmte Prüfung, z. B. eine Verbindung, gegen die Anwendung durchgeführt. Wenn die Verbindung erfolgreich ist, ist die Prüfung grün, wenn nicht, ist die Prüfung rot und es wird eine Warnung ausgegeben. Die Prüfarten sind vielfältig und reichen von einem einfachen Verbindungsversuch bis hin zu einer vollständigen Interaktion mit der Anwendung.
 
@@ -27,7 +27,7 @@ Diese Prüfungen dienen nicht nur dem Zweck, den Administrator zu warnen, sonder
 
 Eine wichtige Frage, die bei regelmäßigen Checks zu beachten ist, ist die Rate der falsch-positiven Ergebnisse. Ein zeitweiliger Netzwerkausfall ist möglicherweise kein Signal für einen Anwendungsausfall und kann dennoch Alarme auslösen. Um eine Alarmmüdigkeit zu vermeiden, hält ein gut konzipiertes Überwachungssystem die Zahl der Fehlalarme auf einem Minimum.
 
-### Feature Tests
+## Feature Tests
 Ein Sonderfall der periodischen Checks sind vollständige Feature Tests. Diese Funktionstests lassen die Grenzen zwischen Softwaretests während der Entwicklungszeit und dem Betrieb verschwimmen. Das Ziel ist es, einen vollständigen Anwendungstest, z. B. mit der [Selenium](https://www.selenium.dev/)-Testsuite, gegen eine Produktionsanwendung durchzuführen. Dieser Test könnte zum Beispiel eine vollständige Registrierung im System testen. Diese Testebene stellt sicher, dass die Anwendung auch nach der Bereitstellung noch funktioniert.
 
 Diese Tests sind zwar nicht in jedem Szenario praktikabel, können aber ein hohes Maß an Sicherheit gewährleisten und auch als **Regressionstest** dienen, wenn sich die Infrastruktur und nicht die Anwendung ändert.
@@ -40,7 +40,7 @@ Ein weiterer wichtiger Aspekt des Monitoring ist die Erfassung von Metriken. Reg
 Der Grund, warum sich Prometheus als Standard etabliert hat, ist seine Fähigkeit, eine dynamische Anzahl von Maschinen zu überwachen. Er fragt zunächst den Cloud-Anbieter nach einer Liste von IP-Adressen ab und fragt dann diese IPs nach den Metriken ab. Wenn Maschinen gestartet und gestoppt werden, behält Prometheus stets den Überblick über sie.
 
 ![Metriken sammeln](./img/metrics.png)
-### Sammlung von Logs
+## Sammlung von Logs
 
 Je nachdem, wie gut die Anwendung geschrieben ist, kann sie mehr oder weniger nützliche Protokolle ausgeben. Eines ist sicher: die Anzahl der Fehler kann auch ein Frühwarnsystem für latente Mängel sein. Das Zugriffsprotokoll kann zum Beispiel die einzelnen Einträge von fehlgeschlagenen Anfragen enthalten. Ein Log-Aggregationssystem wie der [ELK-Stack](https://aws.amazon.com/de/opensearch-service/the-elk-stack/) kann Muster in den Protokollen entdecken und warnen, wenn etwas schief läuft.
 

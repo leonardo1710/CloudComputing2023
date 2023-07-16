@@ -105,9 +105,8 @@ sidebar: auto
 
 [Zur Einheit ->](/lectures/08-monitoring/08-monitoring)
 
-<!--
 [Zum Arbeitsauftrag ->](/exercises/08-monitoring/08-monitoring)
--->
+
 <!--
 ## 09 Security
 
@@ -124,11 +123,8 @@ sidebar: auto
 * Ausarbeitung einer Case Study
 * Recherche zu Cloud Migration Strategie eines ausgewählten Unternehmens
 * Erstellung Präsentation
-* Präsentation am 14.1.2022
 
-<!--
 [Zum Arbeitsauftrag ->](/exercises/09-casestudy/09-casestudy)
--->
 
 ## 10 Anything-as-a-Service - XaaS
 
