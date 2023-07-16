@@ -214,9 +214,9 @@ docker-compose ps
 ````
 
 Now you should be able to access the 3 services in your browser:
-* Grafana: http://localhost:3000
-* Prometheus: http://localhost:9090
-* Python Web App: http://localhost:5000
+* Grafana: ``localhost:3000``
+* Prometheus: ``localhost:9090``
+* Python Web App: ``localhost:5000``
 
 ### Setting up Grafana
 In this section, we will use the Prometheus as a data source to show metrics in Grafana charts.
