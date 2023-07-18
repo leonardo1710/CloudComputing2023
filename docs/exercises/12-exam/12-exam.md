@@ -83,7 +83,7 @@ Bewertung (insgesamt 50 Punkte):
 ### Hilfreiche Ressourcen
 * Verwendet [ChatGPT](https://chat.openai.com/) oder [Google](https://www.google.com/) um euch über die einzelnen Themen zu informieren
 * Arbeitsaufträge: git, Github Actions, Docker, Docker Compose
-* [Dockerize a Yarn/Node App](https://dev.to/otomato_io/how-to-optimize-production-docker-images-running-nodejs-with-yarn-504b)
+* [Dockerize a Node App]([https://dev.to/otomato_io/how-to-optimize-production-docker-images-running-nodejs-with-yarn-504b](https://nodejs.org/en/docs/guides/nodejs-docker-webapp))
 * [React App in Docker serving on Nginx](https://www.youtube.com/watch?v=Sm8GbC02MlE)
 * [Run MongoDB in Docker Container](https://www.geeksforgeeks.org/how-to-run-mongodb-as-a-docker-container/)
 
