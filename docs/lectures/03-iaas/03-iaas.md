@@ -118,12 +118,15 @@ In der Cloud gibt es verschiedene Arten von Compute-Ressourcen, die darauf ausge
   * Durchschnittskonfiguration
   * Am besten für unvorhergesehene Workloads (Testing/Development)
   * Bspw.: Büroanwendungen, Webserver, kleine Datenbanken und Entwicklungsumgebungen
+    
 **Compute optimized**
   * für rechenintensive Workloads optimiert
   * Ideal für Anwendungen wie High-Performance-Webserver, wissenschaftliche Modellierung und Simulation, maschinelles Lernen oder Big Data-Analysen (unstrukturierte Daten)
+    
 **Memory optimized**
   * Bereitstellung großer Mengen an Arbeitsspeicher (RAM)
   * Bsp.: Real-time Operationen, IoT, Messaging
+    
 **Storage optimized**
   * Wenig Berechnung, viel Speicher
   * Bsp.: Data-Warehouses, große Datenbanken, Objektstorages, Content Delivery Networks (CDNs)
