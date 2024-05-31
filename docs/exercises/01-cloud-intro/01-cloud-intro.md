@@ -1,6 +1,6 @@
 ---
 lang: de-DE
-title: 01 Übung - Einführung in Cloud Computing
+title: 01 Exercise - Einführung in Cloud Computing
 description: Description of this page
 sidebar: false
 ---
@@ -13,7 +13,6 @@ sidebar: false
 * Microsoft Azure - Gruppe B
 * Google Cloud - Gruppe C
 * Alibaba Cloud - Gruppe D
-* Oracle Cloud - Gruppe E
 
 **Folgende Punkte sollte die Recherche beinhalten:**
 
@@ -33,6 +32,6 @@ Zu jedem Service:
 ::: tip Abgabe
 - Abgabedokument kann die Präsentationsdatei sein
 - Nur eine Abgabe je Gruppe notwendig
-- Abgabe auf Moodle bis: **23.06.2023 13:00**
-- Präsentation zu Ergebnissen am **23.06.2023**. Die Präsentation sollte ca. 10 Minuten dauern.
+- Abgabe auf Moodle
+- Die Präsentation sollte ca. 10 Minuten dauern.
 :::

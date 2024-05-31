@@ -2,67 +2,62 @@
 
 ## Aufbau des Moduls
 
-![Aufbau](./img/aufbau.png)
-
 <div class="row">
   <div class="column">
-  <p><b>Fundamentals (in den Einheiten)</b></p> 
+  <p><b>Fundamentals - Theorie (in den VO)</b></p> 
   
   <ul>
-    <li>Theoretische Grundlagen</li>
+    <li>Grundlagenwissen und Hintergründe</li>
     <li>Aktive Diskussion</li>
-    <li>Besprechung von Arbeitsaufträgen</li>
+    <li>Präsentationen und Besprechung von Exercises</li>
   </ul>
   </div>
   <div class="column">
-    <p><b>Exercises (betreutes Lernen)</b></p>
+    <p><b>Exercises (betreutes Lernen, Self-Learning)</b></p>
     <ul>
-      <li>Geleitete Anwendung der Fundamentals</li>
+      <li>Geleitete Anwendung durch Tutorials und Step-by-Step Anleitungen</li>
       <li>Hands-On Arbeitsaufträge</li>
     </ul>
   </div>
   <div class="column">
 
-  <p><b>Advanced</b></p>
+  <p><b>Abschluss</b></p>
     <ul>
-      <li>04.08.2023</li>
-      <li>Größerer Arbeitsauftrag und Expert:innengespräche</li>
-      <li>Zusammenführung Theorie und Anwendung</li>
+      <li>Eigenverantwortliche Bearbeitung eines größeren Projekts, das abschließend präsentiert wird.</li>
+      <li>Schriftliche Prüfung in der letzten Einheit.</li>
     </ul>
   </div>
 </div>
 
 ## Lernziele
-<img src="./img/lernziele_cloud.png" style="width: 100%;" alt="Lernziele" class="center">
+<img src="./img/learning_objectives.png" style="width: 100%;" alt="Lernziele" class="center">
  
 ## Grading
 
 <div class="row">
   <div class="column">
-  <p><b>Aktive Diskussion – Mitarbeit (15%)</b></p> 
-  
   <ul>
-    <li>Diskussion in den Einheiten</li>
-    <li>Aktivität im Moodle-Forum</li>
-    <li>Präsentation und Besprechung der Arbeitsaufträge</li>
+    <li>Arbeitsaufträge (Exercises) - sind freiwillig, dienen aber als Basis für das Abschlussprojekt!</li>
+    <li>Cloud Migration Case Study – 10%</li>
+    <li>Abschlussprojekt (in Kleingruppen) – 40%</li>
+    <li>Schriftliche Prüfung – 50%</li>
+    <li><b>Für einen positiven Abschluss der LV müssen das Abschlussprojekt, die Prüfung und der Kurs gesamt mit >= 60% bewertet werden.</b></li>
   </ul>
-  </div>
-  <div class="column">
-    <p><b>Exercises (35%) – muss positiv sein</b></p>
-    <ul>
-      <li>Abgabe der Arbeitsaufträge in Moodle</li>
-    </ul>
-  </div>
-  <div class="column">
-
-  <p><b>Projekt und Abschlussgespräch (50%) – muss positiv sein</b></p>
-    <ul>
-      <li>04.08.2023</li>
-    </ul>
   </div>
 </div>
 
-## Vortragende
+## Termine - 2024
+<div class="row">
+  <div class="column">
+  <ul>
+    <li>12.8.2024: Präsentation der Cloud Migration Case Studies</li>
+    <li>2.9.2024: Abgabe Abschlussprojekt und Projektpräsentation</li>
+    <li>13.9.2024: schriftliche Prüfung</li>
+  </ul>
+  </div>
+</div>
+
+## Vortragender
 
 <div class="row">
   <div class="card-column">
@@ -79,6 +74,7 @@
     </div>
   </div>
 
+<!--
   <div class="card-column">
     <div class="card">
     <div class="img-container">
@@ -92,4 +88,5 @@
       </div>
     </div>
   </div>
+  -->
 </div>

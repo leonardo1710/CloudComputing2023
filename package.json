@@ -12,7 +12,11 @@
   "author": "leon freudenthaler",
   "license": "MIT",
   "devDependencies": {
+    "markdown-it-task-lists": "^2.1.1",
     "vitepress": "^1.0.0-alpha.49",
     "vue": "^3.2.47"
+  },
+  "dependencies": {
+    "markdown-it-task-list": "^0.1.2"
   }
 }

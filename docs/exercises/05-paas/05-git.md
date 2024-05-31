@@ -12,9 +12,7 @@ Aufgabe ist es, erste Funktionalitäten in Git im Zuge eines Tutorials auszuprob
 * Branching und Merging in Git
   
 ## Prerequisites
-* Installation [Node.js](https://nodejs.org/en/download/)
-* Installation einer IDE (bspw. [VSCode](https://code.visualstudio.com/download))
-* Installation [GIT](https://git-scm.com/downloads)
+* Installation von [GIT](https://git-scm.com/downloads)
 * Account anlegen bei einem Git Repository Hosting Service (zB [GitHub](https://github.com/))
 
 ## Tutorial
