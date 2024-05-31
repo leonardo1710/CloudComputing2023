@@ -49,7 +49,7 @@ Erstellt einen Github Actions Workflow in eurem Repository, der beim Push in den
 Notwendige Schritte im Workflow:
 -	Checkout Repository
 -	Node Environment aufsetzen
--	Node Dependencies installieren (npm ci)
+-	Node Dependencies installieren (npm i)
 -	Tests ausführen (npm test)
 
 > Hinweise: nachdem die Tests im ``/server`` Verzeichnis liegen, muss im Workflow das `working-directory` dementsprechend angepasst werden. 
