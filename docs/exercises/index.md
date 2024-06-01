@@ -11,38 +11,37 @@ sidebar: auto
 
 [Zum Arbeitsauftrag ->](/exercises/01-cloud-intro/01-cloud-intro)
 
-## 03 OpenStack Installation
-- Einrichten der VM
-- Installation von OpenStack mit DevStack
+## 02 Linux Bash Recap
+- Wiederholung der wichtigsten Linux Commands
+  
+[Zum Arbeitsauftrag ->](/exercises/02-linux-bash/02-linux-bash-exercises)
 
-[Zum Arbeitsauftrag ->](/exercises/02-openstack/02-openstack-devstack-install)
-
-## 03 IaaS
+## 03 Iaas mit OpenStack 
 Erstellung von IaaS Ressourcen in OpenStack
 - Private Network
 - Virtuelle Maschine
 - Security Groups
-- SSH Verbindung einrichten
 
-[Zum Arbeitsauftrag ->](/exercises/03-iaas/03-vm-openstack)
+[Zum Arbeitsauftrag ->](/exercises/03-iaas/03-openstack-intro)
+
+## 04 Python
+- Programmieren Grundlagen in Python
+- Python Scripting
+- OpenstackSDK in Python
+[Zum Arbeitsauftrag ->](/exercises/04-python/04-python)
 
 
-## 04 Versionskontrolle und Kollaboration mit GIT
+## 05 PaaS: Git und CI/CD
 - Git Basics (klonen, commit, push/pull, merge und branch)
-- Neues Remote Repository anlegen (GitHub)
+- Remote Repositories (GitHub)
 - Kollaboratives Arbeiten am Projekt (Branching und Merging)
+- GitHub Actions und Autodeployment
 
-[Zum Arbeitsauftrag 1 ->](/exercises/04-git/04-git)
+[Zum Arbeitsauftrag 1 ->](/exercises/05-paas/05-git)
 
-[Zum Arbeitsauftrag 2 ->](/exercises/04-git/04-git2)
+[Zum Arbeitsauftrag 2 ->](/exercises/05-paas/05-git2)
 
-
-## 05 CI/CD Pipeline
-- Erstellung eines GitHub Actions Workflow
-- Konfiguration des Workflow
-- Autodeploy bei Push-Event auf GitHub Pages
-
-[Zum Arbeitsauftrag ->](/exercises/05-cicd/05-cicd)
+[Zum Arbeitsauftrag 3 ->](/exercises/05-paas/05-cicd)
 
 
 ## 06.1 Docker Intro
