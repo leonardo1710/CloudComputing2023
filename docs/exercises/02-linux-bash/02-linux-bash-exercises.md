@@ -24,6 +24,10 @@ In dieser Übungseinheit werdet ihr mit der Linux-Befehlszeilenschnittstelle in 
 **Lernziel im Blick behalten:**
   * Das Hauptziel dieser Übung ist es, eure Fähigkeiten im Umgang mit der Linux-Befehlszeilenschnittstelle zu verbessern und euch zu zeigen, wie ihr selbstständig nach Lösungen sucht und sie anwendet. Durch das aktive Experimentieren, Recherchieren und Dokumentieren werdet ihr nicht nur die gestellten Aufgaben lösen, sondern auch ein tieferes Verständnis für das Betriebssystem Linux entwickeln.
 
+## Prerequisites
+1. Aufgaben sind auf der zur Verfügung gestellten VM auszuführen
+2. Verbinde dich via SSH zur VM: 77.237.53.201 Port:22
+3. Anmeldedaten: Username und Passwort aus dem Portal
   
 
 ## Aufgaben mit Lösungen

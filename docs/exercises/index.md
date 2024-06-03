@@ -6,8 +6,8 @@ sidebar: auto
 ---
 
 ## 01 Einführung in Cloud Computing
-- Cloud-Anbieter Recherche (Abgabe in Moodle **23.06.2023**)
-- Gruppenpräsentation (am **23.06.2023**)
+- Cloud-Anbieter Recherche
+- Gruppenpräsentation
 
 [Zum Arbeitsauftrag ->](/exercises/01-cloud-intro/01-cloud-intro)
 
@@ -28,6 +28,7 @@ Erstellung von IaaS Ressourcen in OpenStack
 - Programmieren Grundlagen in Python
 - Python Scripting
 - OpenstackSDK in Python
+  
 [Zum Arbeitsauftrag ->](/exercises/04-python/04-python)
 
 
