@@ -105,3 +105,4 @@ In dieser Übungseinheit werdet ihr mit der Linux-Befehlszeilenschnittstelle in 
 16. **Shell Skripting:**
     - Erstelle ein kleines Shell-Skript, das die Anzahl der Dateien in einem übergebenen Verzeichnis zählt:
     
+    [Link zu den Lösungen ->](/exercises/02-linux-bash/02-linux-bash-exercises-solutions)

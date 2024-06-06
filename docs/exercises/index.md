@@ -16,6 +16,8 @@ sidebar: auto
   
 [Zum Arbeitsauftrag ->](/exercises/02-linux-bash/02-linux-bash-exercises)
 
+[Link zu den Lösungen ->](/exercises/02-linux-bash/02-linux-bash-exercises-solutions)
+
 ## 03 Iaas mit OpenStack 
 Erstellung von IaaS Ressourcen in OpenStack
 - Private Network
