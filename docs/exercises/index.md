@@ -31,7 +31,9 @@ Erstellung von IaaS Ressourcen in OpenStack
 - Python Scripting
 - OpenstackSDK in Python
   
-[Zum Arbeitsauftrag ->](/exercises/04-python/04-python)
+[Zum Arbeitsauftrag 1->](/exercises/04-python/04-python)
+
+[Zum Arbeitsauftrag 2 ->](/exercises/04-python/04-python-sdk)
 
 
 ## 05 PaaS: Git und CI/CD

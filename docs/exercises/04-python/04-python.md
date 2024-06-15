@@ -1,6 +1,6 @@
 ---
 lang: de-DE
-title: 04 Arbeitsauftrag - Python
+title: 04.1 Arbeitsauftrag - Python
 sidebar: auto
 ---
 
@@ -184,75 +184,3 @@ sidebar: auto
   
       Bsp.: ``interpolate([1, 2, 3, 4])`` gibt ``[1, 4, 9, 16]`` zurück.
 
-## 7. Python Scripting mit der OpenStack SDK (Software Development Kit)
-Die OpenStackSDK ist eine umfassende Python Bibliothek (Library), die es Entwickler*innen ermöglicht, auf einfache Weise über Programmcode mit verschiedenen OpenStack-Diensten zu interagieren. Sie bietet eine einheitliche und konsistente API (Application Programming Interface), um auf die vielfältigen Funktionen von OpenStack zuzugreifen und diese zu verwalten. 
-Die SDK ermöglicht eine Vielzahl von Automatisierungen in einer OpenStack-Umgebung. Automatisierte Bereitstellung von:
-* Instanzen (VMs)
-* Netzwerke (inkl. Subnetzen und Routern)
-* Storage
-* Skalierung (Erstellung mehrerer Ressourcen)
-* und vieles mehr
-
-### Integration der OpenStackSDK in ein Python Projekt
-Um die OpenStackSDK in einem Python Projekt nutzen zu können, muss diese zuerst installiert werden. In Python Projekten, werden Dependencies (zB notwendige Bibliotheken) mithilfe eines `requirements.txt` Files verwaltet. Erstellt hierzu ein `requirements.txt` File in eurem Python Projekt und fügt die OpenStackSDK Bibliothek hinzu:
-
-``` requirements.txt
-openstacksdk==3.1.0
-```
-
-`3.1.0` gibt die zu verwendende Version der Bibliothek an. Danach installiert die Bibliothek mithilfe von `pip` (Python Package Installer). Ihr könnt die CMD direkt über VS Code nutzen:
-
-``` CMD
-pip install -r requirements.txt
-```
-
-Dann erstellt ein neues Python Script, in dem ihr die Bibliothek importiert:
-
-``` mypython.py
-# Import Openstack Libary
-import openstack
-
-# Now you can use library related stuff in your script
-```
-
-::: warning Fehlermeldungen
-Sollte bei der Installation von openstacksdk folgender Fehler auftreten `openstacksdk error: Microsoft Visual C++ 14.0 or greater is required.` muss womöglich die Windows SDK aktualisiert werden (https://visualstudio.microsoft.com/de/visual-cpp-build-tools/)
-Siehe die zweite Antwort in folgendem Stackoverflow Issue: https://stackoverflow.com/questions/73969269/error-could-not-build-wheels-for-hnswlib-which-is-required-to-install-pyprojec
-:::
-
-Folgendes Python Skript demonstriert, wie man mit der OpenStackSDK eine Verbindung zur OpenStack-Umgebung herstellt und verschiedene Ressourcen innerhalb eines bestimmten Projekts abfragt. Probiert das Skript mit euren Credentials aus:
-
-``` Python
-# Retrieve OpenStack credentials from environment variables
-auth_args = {
-    'auth_url': 'http://77.237.53.196/identity',  # our server address where openstack is running
-    'username': <your_username>,                       # change to your username
-    'password': <your_password>,                       # change to your password
-    'project_name': <your_project_name>,          # change to your project name
-    'user_domain_name': 'default',
-    'project_domain_name': 'default'
-}
-
-# Initialize connection
-conn = openstack.connection.Connection(**auth_args)
-
-# Query instances in the project
-instances = conn.compute.servers()
-for instance in instances:
-    print("Instance:", instance)
-
-# Query networks in the project
-networks = conn.network.networks()
-for network in networks:
-    print("Network:", network)
-
-# Query volumes in the project
-volumes = conn.block_storage.volumes()
-for volume in volumes:
-    print("Volume:", volume)
-
-# Query images in the project
-images = conn.image.images()
-for image in images:
-    print("Image:", image)
-```
