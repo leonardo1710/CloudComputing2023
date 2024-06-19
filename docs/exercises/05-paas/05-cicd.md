@@ -1,6 +1,6 @@
 ---
 lang: de-DE
-title: 05 Arbeitsauftrag - CI/CD Pipeline
+title: 05.3 Arbeitsauftrag - CI/CD Pipeline
 sidebar: auto
 ---
 
@@ -9,10 +9,10 @@ sidebar: auto
 # Aufbau einer CI/CD Pipeline mit Github Actions und Github Pages
 
 ## Aufgabenstellung
-Nutzt das beim Git Arbeitsauftrag zur Verfügung gestellte Repository für folgende Aufagaben
+Nutzt das beim Git Arbeitsauftrag zur Verfügung gestellte Repository für folgende Aufgaben
 * Erstellen eines Github Actions Workflows
 * Konfiguration des Workflows
-* Auto-deploy bei Push in einen Branch
+* Auto-deploy bei Push in einen bestimmten Branch
 * Abgabe: URL der gehosteten Page auf Moodle + Teammitglieder
 
 ## Prerequisites
@@ -58,7 +58,7 @@ Standardmäßig wird bei GitHub Pages ein Branch namens `gh-pages` als Deploymen
 * 10 Builds/Stunde
 
 ## Wie würde ein manuelles Deployment der Applikation aussehen?
-Würden wir das Projekt manuell deployen, würden die Schritte wie folgt aussehen:
+Würden wir das Projekt (Vitepress Webpage aus der letzten Exercise) manuell deployen, würden die Schritte wie folgt aussehen:
 1. Branch mit Source Files auschecken
 2. Dependencies der Applikation installieren (bspw. mit `npm i`)
 3. Projekt Build -> Statische Files des Sourcecode generieren. In der zur verfügung gestellten Applikation wird der Buildprozess mit dem Command  `npm run docs:build` ausgeführt. Dabei wird ein `/dist` Folder mit den zu hostenden Files erstellt.
