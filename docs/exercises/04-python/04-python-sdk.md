@@ -49,7 +49,7 @@ auth_args = {
     'auth_url': 'http://77.237.53.196/identity',  # our server address where openstack is running
     'username': <your_username>,                       # change to your username
     'password': <your_password>,                       # change to your password
-    'project_name': 'test-project',                    # shared project
+    'project_name': 'testproject',                    # shared project
     'user_domain_name': 'default',
     'project_domain_name': 'default'
 }
