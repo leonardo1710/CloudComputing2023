@@ -1,32 +1,35 @@
 ---
 lang: de-DE
-title: 06 Arbeitsauftrag - Docker Intro
+title: 06.1 Arbeitsauftrag - Docker Intro
 sidebar: auto
 ---
 
 # 06.1 Arbeitsauftrag - Docker Playground
 
+
+## Prerequisites
+* Installation von [Docker](https://www.docker.com/products/docker-desktop)
+* Ggf. Registrierung in [Docker Hub](https://hub.docker.com/signup)
+* Achtet darauf, dass Docker mit Admin-Rechten ausgeführt wird!
+  
 ## Aufgabenstellung
-* Kennenlernen der Docker-Environment im [Docker-Playground](https://labs.play-with-docker.com/) - erfordert Registrierung bei Docker (ist für spätere Einheiten sowieso notwendig)
-  * Docker anhand der Beispiele des Tutorials auszuprobieren
-  * Wenn ihr Docker bereits installiert habt, kann das auch im *"echten"* Docker ausgeführt werden - ist aber nicht notwendig für diese Einheit
-* Download [Docker](https://www.docker.com/products/docker-desktop) - notwendig für die nächste Einheit
+* Kennenlernen der Docker-Environment
+* Docker anhand der Beispiele des Tutorials auszuprobieren
 
-## Was ist **Play with Docker**?
-In dieser Einheit werden wir das online Lab von Docker für eine erste Intro in Docker verwenden. In der nächsten Einheit werden wir mit der richtigen Docker Installation arbeit (bitte bis kommende Woche downloaden).
+## Docker starten und ersten Container erstellen
+Nachdem Docker installiert und gestartet ist, kann mit folgendem Command überprüft werden, ob bei der Installation alles funktioniert hat:
 
-> Play with Docker (PWD) ist ein von Marcos Liljedhal und Jonathan Leibiusky entwickeltes Projekt, das von Docker Inc. gefördert wird.
+``` shell
+docker
+```
 
-> PWD ermöglicht es Benutzer:innen, Docker-Commands in Sekundenschnelle auszuführen. Es können Docker-Container erstellt und ausgeführt und sogar Cluster im Docker Swarm-Modus erstellt werden.
+![Docker installiert](./img/docker_installed.png)
 
-> Jede Instanz ist 4 Stunden verfügbar
-
-## Playground starten und erste Instanz erstellen
-Öffnet den [Docker-Playground](https://labs.play-with-docker.com/) in einem Browser und erstellt eine neue Instanz mit `ADD NEW INSTANCE`:
-
-![PWD Instanz](./img/PWD_createInstance.png)
-
-Der Playground startet daraufhin einen neuen Node + IP Adresse. Weiters sollte die Commandline geöffnet werden (siehe Abbildung oben).
+Oder installierte Docker Version:
+``` shell
+docker -v
+Docker version 24.0.6, build ed223bc
+```
 
 Wie es der Brauch in der IT will, beginnen wir den Tutorial mit einer *Hello World*-App. Dazu werden wir mithilfe des `run` Commands einen neuen Container erstellen:
 

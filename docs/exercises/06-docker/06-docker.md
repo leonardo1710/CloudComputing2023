@@ -15,7 +15,7 @@ sidebar: auto
 
 ## Prerequisites
 * Installation von [Docker](https://www.docker.com/products/docker-desktop)
-* Achtet darauf, dass Docker mit Admin-Rechten ausgeführt wird
+* Achtet darauf, dass Docker mit Admin-Rechten ausgeführt wird!
 * GIT
 * Windows User: PowerShell benutzen - `CMD` kann nicht alle notwendigen Befehle
 
