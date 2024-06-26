@@ -118,7 +118,7 @@ Erstellt einen Branch mit dem Namen `release` und wechselt in den Branch:
 git branch release
 git checkout release
 ```
-Macht eine Änderung unter `/src/index.html`, erstellt dann einen **Commit** und pusht den `release` Branch.
+Macht eine Änderung ein einem der Files (z.B. `index.md`), erstellt dann einen **Commit** und pusht den `release` Branch.
 
 ``` git
 git add .
