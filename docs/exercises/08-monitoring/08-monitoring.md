@@ -226,8 +226,9 @@ if __name__ == '__main__':
 ````
 
 
-Dies ist eine einfache Flask-Webanwendung, die einen einzelnen Endpunkt unter ``localhost:5000`` bereitstellt.
-Um Metriken von unserer Anwendung zu sammeln, verwenden wir die [prometheus_client](https://github.com/prometheus/client_python), die ein Python-Client für Prometheus ist.
+Dies ist eine einfache Flask-Webanwendung, die drei Endpunkt unter ``localhost:5000`` bereitstellt.
+Um Metriken von unserer Anwendung zu sammeln, verwenden wir die [Prometheus Client Library](https://github.com/prometheus/client_python).
+
 Folgende Metriken werden im Skript genutzt:
 * ``REQUEST_TIME`` (Summary): Misst die Zeit, die für die Verarbeitung von Anfragen benötigt wird.
 * ``REQUEST_COUNT`` (Counter): Zählt die Gesamtanzahl von Anfragen.
@@ -239,12 +240,9 @@ Folgende Metriken werden im Skript genutzt:
 Funktionen und Routen (Endpoints):
 * ``process_request_time(t)``: Simuliert die Verarbeitungszeit einer Anfrage (randomisiert).
 * ``simulate_active_users()``: Simuliert das Hinzufügen und Entfernen aktiver Benutzer in einem separaten Thread.
-* ``process_request_cnt()``: Behandelt die Hauptroute ``/``, inkrementiert Metriken für Anfragen und Anwortcodes, simuliert eine zufällige Verarbeitungszeit und loggt Metriken.
-* ``simulate_error()``: Behandelt die Route ``/simulate_error``, inkrementiert Fehler- und Anfragemetriken, simuliert gelegentlich auftretende Fehler und loggt diese.
+* ``process_request_cnt()``: Stellt die Hauptroute ``/`` zur Verfügung, inkrementiert Metriken für Anfragen und Anwortcodes, simuliert eine zufällige Verarbeitungszeit und loggt Metriken.
+* ``simulate_error()``: Stellt die Route ``/simulate_error`` zur Verfügung, inkrementiert Fehler- und Anfragemetriken, simuliert gelegentlich auftretende Fehler und loggt diese.
 * ``handle_metrics()``: Exponiert die Metriken über den Endpunkt ``/metrics`` für das Abfragen durch Prometheus.
-
-
-Now, let's create a ``Dockerfile`` and ``requirements.txt`` to build our project.
 
 Danach erstellen wir ein ``Dockerfile`` und ein ``requirements.txt`` um unser Projekt zu builden:
 
@@ -316,8 +314,6 @@ Nach erfolgreicher Anmeldung solltest Du das Standard-Dashboard von Grafana sehe
 
 ![Grafana](./img/grafana.png)
 
-Next, we need to add Prometheus as a data source. Click on the Add data source button and select Prometheus from the list.
-
 Als nächstes müssen wir Prometheus als Datenquelle hinzufügen. Klicke auf den Button "Add data source" und wähle Prometheus aus der Liste aus.
 
 ![Grafana select source](./img/grafana_select_source.png)
@@ -336,7 +332,7 @@ Klicke auf ``New`` und dann auf ``New Dashboard``, um die Initialisierung zu sta
 Anschließend auf ``Add visualization`` klicken und wählen Prometheus-Datenquelle auswählen.
 
 Im ``Query``-Panel können wir unsere Abfragen eingeben, um die Metriken von Prometheus abzurufen. Wähle ``request_count_total``, um die Anzahl der Anfragen abzufragen, die von unserer Anwendung empfangen wurden.
-Klicken dann auf die Schaltfläche Abfragen ausführen, um die Ergebnisse zu sehen:
+Klicke dann auf die Schaltfläche ``Run Queries``, um die Ergebnisse zu sehen:
 
 ![query no of requests](./img/grafana_query_panel.png)
 
@@ -346,7 +342,7 @@ Um einige Anfragen zu simulieren, öffnen wir einen neuen Browser-Tab und navigi
 
 ![no of requests](./img/requests_total.png)
 
-Füge anschließend noch die restlichen Queries des Python Skripts hinzu und analysiere anschließend welche Metriken sich wann verändern.
+Füge anschließend noch die restlichen Queries des Python Skripts hinzu und analysiere welche Metriken sich wann verändern.
 
 ![query processing time](./img/requests_cnt_and_req_time.png)
 
@@ -354,7 +350,7 @@ Füge anschließend noch die restlichen Queries des Python Skripts hinzu und ana
 
 
 ::: tip Learning Diary Exercise
-Probiere unterschiedliche Endpunkte aus (``http://localhost:5000``, ``http://localhost:5000/simulate_error``,``http://localhost:5000/metrics``) - auch kannst du Endpunkte öfters aufrufen. Analysiere was sich im Grafana Dashboard ändert, und wieso. Notiere in deinem Learning Diary.
+Probiere unterschiedliche Endpunkte aus (``http://localhost:5000``, ``http://localhost:5000/simulate_error``,``http://localhost:5000/metrics``) - rufe die Endpunkte auch öfters auf, um unterschiedliche Metriken zu erhalten. Analysiere was sich im Grafana Dashboard ändert, und wieso. Notiere in deinem Learning Diary.
 :::
 
 ## Submission
