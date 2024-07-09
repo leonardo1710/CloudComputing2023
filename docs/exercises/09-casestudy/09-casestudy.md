@@ -7,7 +7,7 @@ sidebar: auto
 # {{ $frontmatter.title }}
 
 ## Aufgabenstellung
-* Ausarbeitung der Case Studies (eine je Gruppe - **max. 4 Personen**)
+* Ausarbeitung der Case Studies (eine je Gruppe - **2-3 Personen**)
   * Details siehe Punkt "Was soll recherchiert werden?"
   * Links für mögliche Ansätze zur Recherche findet ihr bei den Case Studies
 * Erstellung einer Präsentation der Punkte
