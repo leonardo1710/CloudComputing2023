@@ -6,25 +6,26 @@ sidebar: auto
 
 # {{ $frontmatter.title }}
 
-## Tasks
-* Setup Monitoring with Prometheus and Grafana
-* Collect metrics from a Python Web Application (Flask)
-* Visualize metrics in Grafana
+## Aufgaben
+* Überwachung mit Prometheus und Grafana einrichten
+* Metriken von einer Python-Webanwendung (Flask) sammeln
+* Metriken in Grafana visualisieren
 
 ## Intro
-Service monitoring allows us to analyze specific events in our projects such as database calls, API interactions and requests, tracking resource performance, etc. 
-You can easily detect unusual behaviour or discover useful clues behind the issues.
-In this exercise, we will use Prometheus and Grafana to monitor a Python web application.
-We are going to run all our services locally on Docker containers and use Docker Compose to orchestrate them.
+Service Monitoring ermöglicht es uns, spezifische Ereignisse in unseren Projekten zu analysieren, wie z.B. Datenbankaufrufe, API-Interaktionen und Requests, die Verfolgung der Ressourcennutzung usw.
+Mithilfe des von Monitoring kann ungewöhnliches Verhalten leicht erkannt werden bzw. können nützliche Hinweise zur Problemfindung getrackt werden.
+In dieser Übung werden wir Prometheus und Grafana verwenden, um eine Python-Webanwendung zu überwachen.
+Wir werden alle unsere Services lokal in Docker-Containern ausführen und Docker Compose verwenden, um sie zu orchestrieren.
 
-## Setup the Project
-First, we need to create a new directory for our project. You can name it whatever you want:
+## Projektverzeichnis erstellen
+Zuerst müssen wir ein neues Verzeichnis für unser Projekt erstellen:
 ```bash
 mkdir my-monitoring-exercise
 cd my-monitoring-exercise
 ```
 
-In the next steps we will create multiple files and directories. To give you a better overview, here is the structure of the project:
+
+In den nächsten Schritten werden wir mehrere Dateien und Verzeichnisse erstellen. Die Struktur des Projekts soll wie folgt aussehen:
 ```shell
 my-monitoring-exercise/
 ├── app/
@@ -36,12 +37,13 @@ my-monitoring-exercise/
 └── docker-compose.yml
 ```
 
-We will have a ``docker-compose.yml`` file to orchestrate our services in our root directory. Furthermore, we will have a directory for our Python web application and a directory for Prometheus.
-The python app consists of a ``main.py`` file containing the Flask web application logic, a ``Dockerfile`` which describes how the Python app is build and run and a ``requirements.txt`` file, containing the Python dependencies.
-The ``prometheus.yml`` file will be located in the Prometheus directory and will contain the configuration for Prometheus.
+Wir werden eine ``docker-compose.yml``-Datei haben, um unsere Services im Stammverzeichnis zu orchestrieren. Außerdem werden wir ein Verzeichnis für unsere Python-Webanwendung und ein Verzeichnis für Prometheus nutzen.
+Die Python-App besteht aus einer ``main.py``-Datei, die die Logik der Flask-Webanwendung enthält, einem ``Dockerfile``, das beschreibt, wie die Python-App gebaut und ausgeführt wird, und einer ``requirements.txt``-Datei, die die Python-Abhängigkeiten enthält.
+Die ``prometheus.yml``-Datei befindet sich im Prometheus-Verzeichnis und enthält die Konfiguration für Prometheus.
 
-## Setting up Docker containers
-Now create a ``docker-compose.yml`` file in the root directory and add the following content:
+## Docker Container aufsetzen
+
+Erstelle zusätzlich eine ``docker-compose.yml``-Datei im Rootverzeichnis und füge den folgenden Inhalt hinzu:
 ````yaml
 version: "3.3"
 
@@ -77,19 +79,21 @@ services:
 volumes:
   grafana_data:
 ````
-We are defining three services: Prometheus, Grafana and our Python web application.
-The most important point above configuration is ``prometheus.yml`` file mounting from our local to the docker container.
-This file includes configuration for pulling data (metrics) from our app service or Python project. Without the file, you won't able to see the custom metrics that your project includes.
+Wir definieren drei Dienste: Prometheus, Grafana und unsere Python-Webanwendung.
+Der wichtigste Punkt in der obigen Konfiguration ist das Einbinden der ``prometheus.yml``-Datei von unserem lokalen Verzeichnis in den Docker-Container.
+Diese Datei enthält die Konfiguration zum Abrufen von Daten (Metriken) von unserem App-Dienst oder Python-Projekt. Ohne diese Datei können wir die benutzerdefinierten Metriken, die unser Projekt enthält, nicht sehen.
 
 ::: tip Learning Diary Exercise
-Take a minute to understand what is happening here and discuss it in your Learning Diary submission.
-* Where are the Services running?
-* What will be the order of the services? (Which service will be started first? Why?)
-* Research configurations and commands you don't know yet - write your lessons learned in your Learning Diary
+Nimm dir ein paar Minuten Zeit, um zu verstehen, was hier passiert, und notiere deine Erkenntnisse im Learning Diary.
+
+* Wo laufen die Dienste?
+* Was ist die Reihenfolge der Ausführung der Services sein? (Welcher Dienst wird zuerst gestartet? Warum?)
+* Recherchiere die Konfigurationen und Befehle, die Du noch nicht kennst
 :::
 
-## Setting up Prometheus
-Now create a ``prometheus.yml`` file in the ``prometheus`` directory and add the following content:
+## Prometheus konfigurieren
+
+Erstelle nun eine ``prometheus.yml``-Datei im Verzeichnis ``prometheus`` und füge den folgenden Inhalt hinzu:
 ````yaml
 global:
   scrape_interval: 15s # when Prometheus is pulling data from exporters etc
@@ -101,44 +105,112 @@ scrape_configs:
       - targets:
           - flask_app:8000
 ````
-This configuration file tells Prometheus to pull data from the ``app`` service on port ``5000`` every 15 seconds.
-The ``job_name`` is the name of your project. You can name it whatever you want.
+Diese Konfigurationsdatei teilt Prometheus mit, alle 15 Sekunden Daten vom Dienst "app" auf Port "5000" abzurufen.
+Der Wert für ``job_name`` ist der Name deines Projekts. Der Name kann beliebig gewählt werden.
 
-## Setting up the Python Web Application
-Now create a ``main.py`` file in the ``app`` directory and add the following content:
+## Integration von Prometheus in der Flask Web App
+Erstelle eine ``main.py``-Datei im Verzeichnis ``app`` und füge den folgenden Inhalt hinzu:
 
 ````python
-from prometheus_client import start_http_server, Summary, Counter,generate_latest
-from flask import Flask
+from prometheus_client import start_http_server, Summary, Gauge, Counter, Histogram, generate_latest
+from flask import Flask, Response
 import random
 import time
+import threading
+import logging
 
 app = Flask(__name__)
 
-# Create a metric to track time spent and requests made.
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+
+# Create a metric to track time spent processing requests.
 REQUEST_TIME = Summary('request_processing_seconds', 'Time spent processing request')
+
+# Create a counter to track the total number of requests received.
 REQUEST_COUNT = Counter('request_count', 'Total number of requests received')
 
-# Decorate function with metric.
+# Create a histogram to track the distribution of request durations in seconds.
+# The buckets represent specific intervals (0.1s, 0.3s, 0.5s, 0.7s, 1s, 2s, 5s, 10s).
+REQUEST_DURATION = Histogram('request_duration_seconds', 'Histogram of request durations in seconds', buckets=(0.1, 0.3, 0.5, 0.7, 1, 2, 5, 10))
+
+# Create a counter to track the total number of errors encountered.
+ERROR_COUNT = Counter('error_count', 'Total number of errors encountered')
+
+# Create a counter to track the count of HTTP response status codes.
+# The counter is labeled with 'status_code' to distinguish between different status codes.
+RESPONSE_CODE_COUNT = Counter('response_code_count', 'Count of HTTP response status codes', ['status_code'])
+
+# Create a gauge metric to track the current number of active users.
+CURRENT_USERS = Gauge('current_users', 'Current number of active users')
+
+
+
+# Simulate processing time.
 @REQUEST_TIME.time()
 def process_request_time(t):
     """A dummy function that takes some time."""
     time.sleep(t)
 
+# Simulate adding and removing active users (thread-safe)
+def simulate_active_users():
+    while True:
+        # Simulate users joining or leaving
+        active_users = random.randint(10, 50)  # Simulate between 10 to 50 active users
+        CURRENT_USERS.set(active_users)
+        logging.info(f"Current active users: {CURRENT_USERS.get()}")
+        time.sleep(5)  # Update every 5 seconds
+
+# Start a thread to simulate active users
+simulate_users_thread = threading.Thread(target=simulate_active_users)
+simulate_users_thread.start()
 
 @app.route('/')
 def process_request_cnt():
-    # Process the request logic here
-
     # Increment the request count metric
     REQUEST_COUNT.inc()
 
     # Simulate random request processing time
     processing_time = random.uniform(0, 5)
+
+    # Time the request
     process_request_time(processing_time)
 
-    # Return the response
-    return 'Request processed successfully'
+    # Observe the request duration in the histogram
+    REQUEST_DURATION.observe(processing_time)
+
+    # Log metrics
+    logging.info(f"Request count: {REQUEST_COUNT._value.get()}")
+    logging.info(f"Processing time for request: {processing_time} seconds")
+    logging.info(f"Request duration histogram: {REQUEST_DURATION.collect()[0].samples[0].value}")
+    
+    # Example response code handling
+    response = Response(f"Success response with status code OK", status=200)
+    RESPONSE_CODE_COUNT.labels(status_code=str(response.status_code)).inc()
+    return response
+
+
+# Route to simulate requests with occasional errors
+@app.route('/simulate_error')
+def simulate_error():
+    # Increment the request count metric
+    REQUEST_COUNT.inc()
+    # Simulate random error occurrence
+    if random.random() < 0.2:  # Adjust probability as needed (e.g., 0.2 for 20% chance)
+        # Increment error count
+        ERROR_COUNT.inc()
+        logging.error("Simulated error occurred")
+        logging.info(f"Total errors encountered: {ERROR_COUNT._value.get()}")
+
+        response = Response(f"Simulated error response with status code 500 internal server error", status=500)
+        RESPONSE_CODE_COUNT.labels(status_code=str(response.status_code)).inc()
+
+        return response
+    else:
+        # Example response code is successful OK - 200
+        response = Response(f"No error occurred - statuscode: OK", status=200)
+        RESPONSE_CODE_COUNT.labels(status_code=str(response.status_code)).inc()
+        return response
 
 @app.route('/metrics')
 def handle_metrics():
@@ -153,14 +225,28 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 ````
 
-This is a simple Flask web application that exposes a single endpoint at ``localhost:5000``.
-To collect metrics from our application, we are using the [prometheus_client](https://github.com/prometheus/client_python) library, which is a Python client for Prometheus.
-We are defining two metrics: ``request_processing_seconds`` and ``request_count`` that will be used to track the time spent processing requests and the total number of requests received.
-The ``process_request_time`` function is decorated with the ``@REQUEST_TIME.time()`` decorator, which will track the time spent processing requests.
-The ``process_request_cnt`` function increments the ``request_count`` metric by one for each request received.
-Those metrics will be exposed at ``localhost:8000`` for our Prometheus service to collect them.
+
+Dies ist eine einfache Flask-Webanwendung, die einen einzelnen Endpunkt unter ``localhost:5000`` bereitstellt.
+Um Metriken von unserer Anwendung zu sammeln, verwenden wir die [prometheus_client](https://github.com/prometheus/client_python), die ein Python-Client für Prometheus ist.
+Folgende Metriken werden im Skript genutzt:
+* ``REQUEST_TIME`` (Summary): Misst die Zeit, die für die Verarbeitung von Anfragen benötigt wird.
+* ``REQUEST_COUNT`` (Counter): Zählt die Gesamtanzahl von Anfragen.
+* ``REQUEST_DURATION`` (Histogram): Hält die Verteilung der Anfragedauern in Sekunden fest, mit spezifischen Intervallen (Buckets).
+* ``ERROR_COUNT`` (Counter): Zählt die Gesamtzahl von Fehlern, die aufgetreten sind.
+* ``RESPONSE_CODE_COUNT`` (Counter): Zählt die Häufigkeit der HTTP-Antwortstatuscodes, unterschieden durch status_code.
+* ``CURRENT_USERS`` (Gauge): Zeigt die aktuelle Anzahl aktiver Benutzer an.
+
+Funktionen und Routen (Endpoints):
+* ``process_request_time(t)``: Simuliert die Verarbeitungszeit einer Anfrage (randomisiert).
+* ``simulate_active_users()``: Simuliert das Hinzufügen und Entfernen aktiver Benutzer in einem separaten Thread.
+* ``process_request_cnt()``: Behandelt die Hauptroute ``/``, inkrementiert Metriken für Anfragen und Anwortcodes, simuliert eine zufällige Verarbeitungszeit und loggt Metriken.
+* ``simulate_error()``: Behandelt die Route ``/simulate_error``, inkrementiert Fehler- und Anfragemetriken, simuliert gelegentlich auftretende Fehler und loggt diese.
+* ``handle_metrics()``: Exponiert die Metriken über den Endpunkt ``/metrics`` für das Abfragen durch Prometheus.
+
 
 Now, let's create a ``Dockerfile`` and ``requirements.txt`` to build our project.
+
+Danach erstellen wir ein ``Dockerfile`` und ein ``requirements.txt`` um unser Projekt zu builden:
 
 **Dockerfile**
 
@@ -187,86 +273,89 @@ CMD ["python", "main.py"]
 ````
 
 ::: tip Learning Diary Exercise
-Take a minute to understand what is happening here and discuss it in your Learning Diary submission.
-* What is the base image?
-* What is the working directory?
-* What is the entry point command?
-* Research configurations and commands you don't know yet.
+Beantworte folgende Fragen zum Dockerfile im Learning Diary
+
+* Was ist das Basisimage?
+* Was ist das Working Directory?
+* Welcher Command wird beim Starten des Containers ausgeführt und warum?
+* Recherchiere Konfigurationen und Befehle, die Du noch nicht kennst.
 :::
 
 **requirements.txt**
 
 ````text
-Flask==2.0.1
+Flask==2.2.2
+Werkzeug==2.2.2
 prometheus_client==0.11.0
 ````
 
-To start the services run the following command in the **root directory**:
+Um die Services zu starten, führe den folgenden Befehl im Rootverzeichnis aus:
 
 ````shell
 docker-compose up -d
 ````
 
-This will start the services in the background. You can check the status of the services with the following command:
+Status-Check der Services:
 
 ````shell
 docker-compose ps
 ````
 
-Now you should be able to access the 3 services in your browser:
+Nun sind alle Services über den Browser erreichbar:
 * Grafana: ``localhost:3000``
 * Prometheus: ``localhost:9090``
 * Python Web App: ``localhost:5000``
 
-### Setting up Grafana
-In this section, we will use the Prometheus as a data source to show metrics in Grafana charts.
+### Grafana einrichten
+In diesem Abschnitt verwenden wir Prometheus als Datenquelle, um Metriken in Grafana-Diagrammen anzuzeigen.
 
-Navigate to ``localhost:3000`` to see the Grafana login page and use ``admin`` both for username and password. 
-Then it will require adding a new password and we can keep it the same as it is since we're testing locally.
+Navigiere zu ``localhost:3000`` (im Browser), um die Loginpage von Grafana zu sehen, und verwende sowohl für Benutzername als auch Passwort ``admin``.
+Anschließend werden wir aufgefordert, ein neues Passwort hinzuzufügen, das wir für unsere lokalen Zwecke unverändert lassen können.
 
-After successful login, we should see the default dashboard of Grafana and select Data Sources from the page.
+Nach erfolgreicher Anmeldung solltest Du das Standard-Dashboard von Grafana sehen und die Option "Data Sources" auswählen können.
 
 ![Grafana](./img/grafana.png)
 
 Next, we need to add Prometheus as a data source. Click on the Add data source button and select Prometheus from the list.
 
+Als nächstes müssen wir Prometheus als Datenquelle hinzufügen. Klicke auf den Button "Add data source" und wähle Prometheus aus der Liste aus.
+
 ![Grafana select source](./img/grafana_select_source.png)
 
-Now we need to configure Prometheus as a data source. Under `URL` enter `http://prometheus:9090` which is the docker service name that we created.
-We can use the default values for all other settings. Finally, click on the Save & Test button to save the data source.
+Nun müssen wir Prometheus als Datenquelle konfigurieren. Gib unter URL die Adresse ``http://prometheus:9090`` ein, die der Docker-Dienstname und Port ist, den wir erstellt haben.
+Für alle anderen Einstellungen können die Standardwerte verwendet werden. Klicke abschließend auf die Schaltfläche "Save & Test", um die Datenquelle zu speichern.
 
 ![Grafana Prometheus source](./img/grafana_prometheus_source.png)
 
-Now our Grafana is ready to illustrate the metrics that come from Prometheus.
-Let's now navigate to ``http://localhost:3000/dashboards`` to create a new dashboard. 
-Click ``New`` and then ``New Dashboard`` for initialization:
+Jetzt ist unser Grafana bereit, Metriken darzustellen, die von Prometheus stammen.
+Navigiere zu ``http://localhost:3000/dashboards``, um ein neues Dashboard zu erstellen.
+Klicke auf ``New`` und dann auf ``New Dashboard``, um die Initialisierung zu starten:
 
 ![Dashboard](./img/dashboard.png)
 
-Afterwards click on the ``Add visualization`` button and select your Prometheus data source.
+Anschließend auf ``Add visualization`` klicken und wählen Prometheus-Datenquelle auswählen.
 
-In the ``Query`` panel, we can write our queries to get the metrics from Prometheus. Select ``request_count_total`` to query the number of requests received by our application.
-Then click on the ``Run queries`` button to see the results:
+Im ``Query``-Panel können wir unsere Abfragen eingeben, um die Metriken von Prometheus abzurufen. Wähle ``request_count_total``, um die Anzahl der Anfragen abzufragen, die von unserer Anwendung empfangen wurden.
+Klicken dann auf die Schaltfläche Abfragen ausführen, um die Ergebnisse zu sehen:
 
 ![query no of requests](./img/grafana_query_panel.png)
 
-To simulate some requests, open a new browser tab and navigate to ``http://localhost:5000``. Each time you refresh the page, the number of requests will increase by one.
-> Note: it may take a few seconds for the metrics to be updated in Grafana.
+Um einige Anfragen zu simulieren, öffnen wir einen neuen Browser-Tab und navigieren zu ``http://localhost:5000``. Jedes Mal, wenn Du die Seite aktualisierst, wird die Anzahl der Anfragen um eins erhöht.
+
+> Note: Es kann einige Sekunden dauern, bis die Metriken in Grafana aktualisiert werden.
 
 ![no of requests](./img/requests_total.png)
 
-Next, add nother visualization and select ``request_processing_seconds_count`` to query the time the requests spent processing.
-Then click on the ``Run queries`` button to see the results:
+Füge anschließend noch die restlichen Queries des Python Skripts hinzu und analysiere anschließend welche Metriken sich wann verändern.
 
 ![query processing time](./img/requests_cnt_and_req_time.png)
 
-> Note: to better see the results you can change the time range to ``Last 5 minutes``.
+> Note: Um die Resultate in Grafana genauer darzustellen kannst du die Ansicht auf ``Last 5 minutes`` einstellen.
 
 
 ::: tip Learning Diary Exercise
-Take a minute to understand what the graphs are showing and why. Find out how the ``main.py`` file is connected to the graphs and discuss it in your Learning Diary submission.
+Probiere unterschiedliche Endpunkte aus (``http://localhost:5000``, ``http://localhost:5000/simulate_error``,``http://localhost:5000/metrics``) - auch kannst du Endpunkte öfters aufrufen. Analysiere was sich im Grafana Dashboard ändert, und wieso. Notiere in deinem Learning Diary.
 :::
 
 ## Submission
 * Learning Diary in Moodle
-* Discuss the topics from the tutorial and your personal lessons learned in the Learning Diary.
