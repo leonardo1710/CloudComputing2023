@@ -158,7 +158,7 @@ def simulate_active_users():
         # Simulate users joining or leaving
         active_users = random.randint(10, 50)  # Simulate between 10 to 50 active users
         CURRENT_USERS.set(active_users)
-        logging.info(f"Current active users: {CURRENT_USERS.get()}")
+        logging.info(f"Current active users: {active_users}")
         time.sleep(5)  # Update every 5 seconds
 
 # Start a thread to simulate active users
