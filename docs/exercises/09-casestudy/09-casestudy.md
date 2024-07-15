@@ -9,8 +9,10 @@ sidebar: auto
 ## Aufgabenstellung
 * Ausarbeitung der Case Studies (eine je Gruppe - **2-3 Personen**)
   * Details siehe Punkt "Was soll recherchiert werden?"
-  * Links für mögliche Ansätze zur Recherche findet ihr bei den Case Studies
-* Erstellung einer Präsentation der Punkte
+  * Links für mögliche Ansätze zur Recherche findet ihr bei den Case Studies (weitere Recherche vorausgesetzt: zB.: Youtube, Foren, Suche, ...)
+  * Begriffe, die nicht bekannt sind, sind auch zu recherchieren
+* Erstellung einer Präsentation der Inhalte
+* Quellen angeben!
 * Länge Präsentation: mind. 20 Minuten
 * Abgabe der Präsentation auf Moodle
 
@@ -99,15 +101,16 @@ Evernote, das seit seiner Gründung seine eigenen Server und sein eigenes Netzwe
 ## Was soll recherchiert werden?
 * Hintergründe - Unternehmen 
   * Seit wann gibt es das Unternehmen?
-  * Welche Dienstleistungen/Services/Produkte bietet das Unternehmen?
+  * Welche Dienstleistungen/Services/Produkte bietet das Unternehmen an (Kernprozesse, Business Value)?
   * Marketshare? (ca.)
-* Warum wurde der Schritt in die Cloud gewagt? Bzw. warum wurde eine andere Cloud Migration Strategie gewählt?
-  * IST-Stand vor der Migration 
+* Warum wurde der Schritt in die Cloud gewagt? Warum wurde eine andere Cloud Migration Strategie gewählt?
+  * Stand VOR der Migration 
     * Datacenter
     * anderer Cloud Service Provider
     * Services
     * Daten 
     * …
+  * Stand NACH der Migration
   * Probleme? Herausforderungen? 
   * Erwartungen an die Cloud Migration Strategie? Was wollte das Unternehmen mit dem Schritt erreichen? Ziele?
 * Wie wurde die Migration durchgeführt? Prozess?
@@ -120,4 +123,4 @@ Evernote, das seit seiner Gründung seine eigenen Server und sein eigenes Netzwe
 
 
 ## Abgabe
-* Abgabe der Präsentation auf [Moodle](https://moodle.fh-campuswien.ac.at/mod/assign/view.php?id=698025)
+* Abgabe der Präsentation auf Moodle

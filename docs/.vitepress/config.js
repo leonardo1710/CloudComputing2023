@@ -32,7 +32,7 @@ export default defineConfig( {
           { text: "06.2 Docker Advanced", link: "/exercises/06-docker/06-docker" },
           { text: "07 Docker Compose", link: "/exercises/07-docker-compose/07-docker-compose" },
           { text: "08 Cloud Monitoring", link: "/exercises/08-monitoring/08-monitoring" },
-          //{ text: "09 Migration Case Study", link: "/exercises/09-casestudy/09-casestudy" },
+          { text: "09 Migration Case Study", link: "/exercises/09-casestudy/09-casestudy" },
           //{ text: "10 Abschlussprojekt", link: "/exercises/12-exam/12-exam" },
 
         ],
