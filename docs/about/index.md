@@ -50,8 +50,8 @@
 <div class="row">
   <div class="column">
   <ul>
-    <li>12.8.2024: Präsentation der Cloud Migration Case Studies</li>
-    <li>2.9.2024: Abgabe Abschlussprojekt und Projektpräsentation</li>
+    <li>05.8.2024: Präsentation der Cloud Migration Case Studies</li>
+    <li>3.9.2024: Abgabe Abschlussprojekt und Projektpräsentation</li>
     <li>13.9.2024: schriftliche Prüfung</li>
   </ul>
   </div>
