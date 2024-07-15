@@ -87,16 +87,20 @@ Evernote, das seit seiner Gründung seine eigenen Server und sein eigenes Netzwe
 #### Links
 [Evernote Reaches the Cloud: Migration to Google Cloud Platform Complete](https://evernote.com/blog/evernote-migration-to-google-cloud-platform/)
 
-[The Evernote Service and our options to migrate to Google Cloud Platform (Part 1)](https://evernote.com/blog/part-1-our-options-to-migrate/)
+The Evernote Service and our options to migrate to Google Cloud Platform (Part 1)
+-> [Part 1 - Web Archive](https://web.archive.org/web/20231004030648/https://evernote.com/blog/part-1-our-options-to-migrate/)
 
-[Protecting Customer Data on GCP (Part 2)](https://evernote.com/blog/part-2-protecting-customer-data-on-gcp/)
+Protecting Customer Data on GCP (Part 2)
+-> [Part 2 - Web Archive](https://web.archive.org/web/20230706203618/https://evernote.com/blog/part-2-protecting-customer-data-on-gcp/)
 
-[Architecture in GCP and our Technical Transformation (Part 3)](https://evernote.com/blog/part-3-the-evernote-architecture-in-gcp/)
+Architecture in GCP and our Technical Transformation (Part 3)
+-> [Part 3 - Web Archive](https://web.archive.org/web/20230706184314/https://evernote.com/blog/part-3-the-evernote-architecture-in-gcp/)
 
-[Planning and Executing the Migration (Part 4)](https://evernote.com/blog/part-4-planning-and-executing-the-migration/)
+Planning and Executing the Migration (Part 4)
+-> [Part 4 - Web Archive](https://web.archive.org/web/20230706184247/https://evernote.com/blog/part-4-planning-and-executing-the-migration/)
 
-[Lessons Learned (Part 5)](https://evernote.com/blog/part-5-conclusion-and-future/)
-
+Lessons Learned (Part 5)
+-> [Part 5 - Web Archive](https://web.archive.org/web/20230706184307/https://evernote.com/blog/part-5-conclusion-and-future/)
 
 ## Was soll recherchiert werden?
 * Hintergründe - Unternehmen 
