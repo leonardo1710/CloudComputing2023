@@ -33,7 +33,7 @@ export default defineConfig( {
           { text: "07 Docker Compose", link: "/exercises/07-docker-compose/07-docker-compose" },
           { text: "08 Cloud Monitoring", link: "/exercises/08-monitoring/08-monitoring" },
           { text: "09 Migration Case Study", link: "/exercises/09-casestudy/09-casestudy" },
-          //{ text: "10 Abschlussprojekt", link: "/exercises/12-exam/12-exam" },
+          { text: "10 Abschlussprojekt", link: "/exercises/12-exam/12-exam" },
 
         ],
       },
