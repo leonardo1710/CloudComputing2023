@@ -137,6 +137,8 @@ network:
     mtu: 2450
 ```
 
+Danach mittels `sudo netplan apply` die neue Konfiguration laden.
+
 **VPN Tunnel in Wireguard einrichten**
 `Neuer Tunnel hinzufügen` -> `einen leeren Tunnel hinzufügen`:
 
