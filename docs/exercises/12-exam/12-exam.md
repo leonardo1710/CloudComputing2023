@@ -88,7 +88,7 @@ Folgende Ausgabe ist bei einem korrekten Durchlauf des Workflows zu erwarten:
 Anstelle einer lokalen MongoDB Datenbank, soll MongoDB als DBaaS in das System integriert werden. Dh. eure DB Instanz wird direkt bei einem Cloud Provider, in diesem Fall Atlas (https://www.mongodb.com/atlas/database), gehostet. 
 Erstellt dazu einen neuen Account und legt eine DB an. Um eure gehostete DB mit der App zu verbinden, muss die MONGO_URL anschließend im `.env` File adaptiert werden. Die Verbindungs-URL zur gehosteten DB findet ihr unter `Connect` -> `Drivers`. Hier könnt ihr den Connection String kopieren.
 
-![Atlas](./img/mongo_db_atlas.PNG)
+![Atlas](./img/mongo_db_atlas2.png)
 
 Da ihr nun eine zentrale DB in der Cloud nutzt, könnt ihr miteinander über mehrere PCs hinweg chatten - die Daten werden nun synchronisiert.
 
@@ -112,9 +112,9 @@ Läuft die Chat-App fehlerfrei inkl. aller Komponenten lokal auf euren Geräten,
 Jede*m wurde eine VM zugeteilt (siehe Mail) - ihr könnt als Team jedoch auch nur eine einzige Maschine nutzen. 
 
 Zu Beginn muss die VM eingerichtet werden:
-* Verbindet euch via (Proxmox)[https://csdc-server1.fh-campuswien.ac.at/] und euren Portal-Credentials mit eurer Maschine
+* Verbindet euch via [Proxmox](https://csdc-server1.fh-campuswien.ac.at/) und euren Portal-Credentials mit eurer Maschine
 * VM Credentials wurden auch in der Mail zugesandt
-* Download und Installation von (WireGuard)[https://www.wireguard.com/install/] falls noch nicht installiert - VPN wird genutzt, da die Maschinen nicht über ein öffentliches Netz erreichbar sind.
+* Download und Installation von [WireGuard](https://www.wireguard.com/install/) falls noch nicht installiert - VPN wird genutzt, da die Maschinen nicht über ein öffentliches Netz erreichbar sind.
 * Konfiguriert Netplan in eurer VM um eine SSH Verbindung zu ermöglichen
 * Aktiviert VPN und verbindet euch via SSH zu eurer Maschine
 * Klont das Repository in der VM
