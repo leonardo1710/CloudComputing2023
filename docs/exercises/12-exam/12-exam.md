@@ -111,7 +111,7 @@ In diesem Schritt soll die Chat-App (und alle zugehörigen Services) "dockerisie
 Läuft die Chat-App fehlerfrei inkl. aller Komponenten lokal auf euren Geräten, kann nun mit dem Deployment auf eurer VM begonnen werden. 
 Jede*m wurde eine VM zugeteilt (siehe Mail) - ihr könnt als Team jedoch auch nur eine einzige Maschine nutzen. 
 
-Zu Beginn muss die VM eingerichtet werden:
+Notwendige Schritte zum Deployment auf der VM:
 * Verbindet euch via [Proxmox](https://csdc-server1.fh-campuswien.ac.at/) und euren Portal-Credentials mit eurer Maschine
 * VM Credentials wurden auch in der Mail zugesandt
 * Download und Installation von [WireGuard](https://www.wireguard.com/install/) falls noch nicht installiert - VPN wird genutzt, da die Maschinen nicht über ein öffentliches Netz erreichbar sind.
